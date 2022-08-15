@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="arrayonly.js"></script>
+	<script>
+	
+	$(document).ready(function(){
+		//$('body').append(zips[]);
+		
+	
+	
+/*	var users = {
+    user : {username: 'user9110252username', genrePref: 'user9110252genre'},
+    jon : {username: 'Jon', genrePref: 'rock'},
+    lucy : {username: 'Lucy', genrePref: 'pop'},
+    mike : {username: 'Mike', genrePref: 'rock'},
+    luke : {username: 'Luke', genrePref: 'house'},
+    james : {username: 'James', genrePref: 'house'},
+    dave : {username: 'Dave', genrePref: 'bass'},
+    sarah : {username: 'Sarah', genrePref: 'country'},
+    natalie : {username: 'Natalie', genrePref: 'bass'}
+}*/
+	//alert(users);
+		
+//--------zip: '32804', state: 'FL', county: 'Orange', city: 'Orlando', timezone: '5', distance: '0.00'	
+		
+		$('body').append(zips["32804"]["zip"]+" "+zips["32804"]["distance"]);
+		console.log(zips);
+		
+		
+});	
+	
+	</script>
+</head>
+
+<body>
+</body>
+</html>
