@@ -224,7 +224,7 @@ function checkZip(zipFound, zipArray){
 
 $("#carSelect").change(function(){
 		   curCar = $("#carSelect").val();
-		  alert(curCar); 
+		  //alert(curCar); 
 
 
 });
