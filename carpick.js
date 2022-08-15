@@ -267,7 +267,7 @@ function checkZip(zipFound, zipArray){
 $("#carSelect").change(function(){
 		   curCar = $("#carSelect").val();
 		  document.cookie = "car="+curCar;
-			alert(document.cookie);
+			//alert(document.cookie);
 		  //alert(document.cookie); 
 
 
@@ -289,7 +289,7 @@ $("#zipInput").focusout(function(){
 		  $("#distFee").empty().append("$"+ curDistPrice +".00").removeClass("distFeeSpecial");
 		  $("#zipInput").removeClass("zipCodeError");
 			document.cookie = "zip="+curZip;
-			alert(document.cookie);
+			//alert(document.cookie);
 		  
 	  } else {
 		  
@@ -315,7 +315,7 @@ $('#zipInput').keypress(function (e) {
 		  $("#distFee").empty().append("$"+ curDistPrice +".00").removeClass("distFeeSpecial");
 		  $("#zipInput").removeClass("zipCodeError");
 			document.cookie = "zip="+curZip;
-			alert(document.cookie);
+			//alert(document.cookie);
 			return false;
 		  
 	  } else {
