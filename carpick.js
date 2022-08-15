@@ -1,5 +1,35 @@
+//document.cookie = "car=truckL;";
+//document.cookie = "zip=32810;";
+/*if(document.cookie != ""){
+
+			}else{
+	//no cookie
+}*/
+
+//document.cookie="username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+
 $(document).ready(function(){
-	
+//var decodedCookie = decodeURIComponent(document.cookie);
+var curCookie
+	alert(document.cookie);
+	if(document.cookie){
+		curCookie =  document.cookie;
+		var curCookies = curCookie.split(";");
+		alert(curCookies);
+		var cCar = curCookies[0];
+		var cZip = curCookies[1];
+		cCar = cCar.split("=")[1];
+		cZip = cZip.split("=")[1];
+		$("#zipInput").val(""+cZip+"");
+		$("#carSelect").val(""+cCar+"");
+		
+	} else{
+		alert(curCookie);
+		var cCar = false;
+		var cZip = false;
+		
+		//alert(false);
+	}
 
 
   //var chosenCar = $(this).find("img").hasClass("selected-car-type");
@@ -224,7 +254,9 @@ function checkZip(zipFound, zipArray){
 
 $("#carSelect").change(function(){
 		   curCar = $("#carSelect").val();
-		  //alert(curCar); 
+		  document.cookie = "car="+curCar;
+			alert(document.cookie);
+		  //alert(document.cookie); 
 
 
 });
@@ -244,6 +276,8 @@ $("#zipInput").focusout(function(){
 		  
 		  $("#distFee").empty().append("$"+ curDistPrice +".00").removeClass("distFeeSpecial");
 		  $("#zipInput").removeClass("zipCodeError");
+			document.cookie = "zip="+curZip;
+			alert(document.cookie);
 		  
 	  } else {
 		  
@@ -268,6 +302,8 @@ $('#zipInput').keypress(function (e) {
 		  
 		  $("#distFee").empty().append("$"+ curDistPrice +".00").removeClass("distFeeSpecial");
 		  $("#zipInput").removeClass("zipCodeError");
+			document.cookie = "zip="+curZip;
+			alert(document.cookie);
 			return false;
 		  
 	  } else {
