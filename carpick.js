@@ -36,10 +36,12 @@ var curCookie
 /*		alert(curCookie);
 		var cCar = false;
 		var cZip = false;*/
-		
-		var cCar = false;
-		var cZip = false;
-		
+		document.cookie = "car=sedan;";
+		document.cookie = "zip=32804;";
+		var cCar = "sedan";
+		var cZip = "32804";
+		$("#zipInput").val(""+cZip+"");
+		$("#carSelect").val(""+cCar+"");
 		//alert(false);
 	}
 
