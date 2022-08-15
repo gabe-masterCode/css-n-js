@@ -10,10 +10,15 @@
 
 $(document).ready(function(){
 //var decodedCookie = decodeURIComponent(document.cookie);
+function getCookie(name) {
+  const value = `; ${document.cookie}`;
+  const parts = value.split(`; ${name}=`);
+  if (parts.length === 2) return parts.pop().split(';').shift();
+}
 var curCookie
-	alert(document.cookie);
-	if(document.cookie){
-		curCookie =  document.cookie;
+	//alert(document.cookie);
+	if(getCookie("car")!=""){
+		/*curCookie =  document.cookie;
 		var curCookies = curCookie.split(";");
 		alert(curCookies);
 		var cCar = curCookies[0];
@@ -21,10 +26,17 @@ var curCookie
 		cCar = cCar.split("=")[1];
 		cZip = cZip.split("=")[1];
 		$("#zipInput").val(""+cZip+"");
+		$("#carSelect").val(""+cCar+"");*/
+		var cCar = getCookie("car");
+		var cZip = getCookie("zip");
+		$("#zipInput").val(""+cZip+"");
 		$("#carSelect").val(""+cCar+"");
 		
 	} else{
-		alert(curCookie);
+/*		alert(curCookie);
+		var cCar = false;
+		var cZip = false;*/
+		
 		var cCar = false;
 		var cZip = false;
 		
