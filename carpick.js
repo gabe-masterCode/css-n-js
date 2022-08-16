@@ -281,16 +281,22 @@ function checkZip(zipFound, zipArray){
 	
 }
 
+	function changePricing(car){
+	
+	var price = curCarSelected(car);
+$(".bgBox-alt-bg1-end h2").empty().append("$"+ price[0] +".00<sup>*</sup>");
+$(".bgBox-alt-bg2-end h2").empty().append("$"+ price[1] +".00<sup>*</sup>");
+$(".bgBox-alt-bg3-end h2").empty().append("$"+ price[2] +".00<sup>*</sup>");
+		
+	}
+	
+changePricing(curCar);	
+	
 $("#carSelect").change(function(){
 	
 		   curCar = $("#carSelect").val();
 		  document.cookie = "car="+curCar;
-		  var price = curCarSelected(curCar);
-			//alert(document.cookie);
-		  //alert(document.cookie); 
-$(".bgBox-alt-bg1-end h2").empty().append("$"+ price[0] +".00<sup>*</sup>");
-$(".bgBox-alt-bg2-end h2").empty().append("$"+ price[1] +".00<sup>*</sup>");
-$(".bgBox-alt-bg3-end h2").empty().append("$"+ price[2] +".00<sup>*</sup>");
+		  changePricing(curCar);
 });
 	
 	
