@@ -59,6 +59,7 @@ var vTruckLarge = $('#detail-wash-truck-large-3-doors-4-doors');
 
 const distFee = ["10","15","25","50","E-mail us for specialty projects."];
 const carTypes = [vSedan,vCoupe,vSUV,vCaravan,vTruck,vTruckLarge];
+const carSelection = ["sedan","coupe","suv","caravan","truck","truckL"];
 //basic-vip-showroom-machine
 const pSedan = ["60","100","600","180"];
 const pCoupe = [pSedan[0],pSedan[1],"400",pSedan[3]];
@@ -108,10 +109,24 @@ function distPrice(zipDist, distFee, outofbounds){
 }
 	
 function curCarSelected(car){
-	
-	
+	const price;
+	if(car == "sedan"){
+price = pSedan;
+} else if(car == "coupe"){
+price = pCoupe;
+} else if(car == "suv"){
+price = pSUV;
+} else if(car == "caravan"){
+price = pCaravan;
+} else if(car == "truck"){
+price = pTruck;
+} else if(car == "truckL"){
+price = pTruckL;
+}
+return price;	
 }	
 	
+
 	
 
 function pickCar(car){
@@ -267,12 +282,15 @@ function checkZip(zipFound, zipArray){
 }
 
 $("#carSelect").change(function(){
+	
 		   curCar = $("#carSelect").val();
 		  document.cookie = "car="+curCar;
+		  var price = curCarSelected(car);
 			//alert(document.cookie);
 		  //alert(document.cookie); 
-
-
+$("#bgBox-alt-bg1-end h2").empty().append("$"+ price[0] +".00<sup>*</sup>");
+$("#bgBox-alt-bg2-end h2").empty().append("$"+ price[1] +".00<sup>*</sup>");
+$("#bgBox-alt-bg3-end h2").empty().append("$"+ price[2] +".00<sup>*</sup>");
 });
 	
 	
