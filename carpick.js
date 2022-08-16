@@ -288,9 +288,9 @@ $("#carSelect").change(function(){
 		  var price = curCarSelected(car);
 			//alert(document.cookie);
 		  //alert(document.cookie); 
-$("#bgBox-alt-bg1-end h2").empty().append("$"+ price[0] +".00<sup>*</sup>");
-$("#bgBox-alt-bg2-end h2").empty().append("$"+ price[1] +".00<sup>*</sup>");
-$("#bgBox-alt-bg3-end h2").empty().append("$"+ price[2] +".00<sup>*</sup>");
+$(".bgBox-alt-bg1-end h2").empty().append("$"+ price[0] +".00<sup>*</sup>");
+$(".bgBox-alt-bg2-end h2").empty().append("$"+ price[1] +".00<sup>*</sup>");
+$(".bgBox-alt-bg3-end h2").empty().append("$"+ price[2] +".00<sup>*</sup>");
 });
 	
 	
