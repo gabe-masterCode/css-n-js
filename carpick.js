@@ -109,7 +109,7 @@ function distPrice(zipDist, distFee, outofbounds){
 }
 	
 function curCarSelected(car){
-	const price;
+	var price;
 	if(car == "sedan"){
 price = pSedan;
 } else if(car == "coupe"){
@@ -285,7 +285,7 @@ $("#carSelect").change(function(){
 	
 		   curCar = $("#carSelect").val();
 		  document.cookie = "car="+curCar;
-		  var price = curCarSelected(car);
+		  var price = curCarSelected(curCar);
 			//alert(document.cookie);
 		  //alert(document.cookie); 
 $(".bgBox-alt-bg1-end h2").empty().append("$"+ price[0] +".00<sup>*</sup>");
