@@ -10,6 +10,9 @@
 
 $(document).ready(function(){
 //var decodedCookie = decodeURIComponent(document.cookie);
+	var cCar;
+	var cZip;
+	var cFee;
 function getCookie(name) {
   const value = `; ${document.cookie}`;
   const parts = value.split(`; ${name}=`);
@@ -27,10 +30,12 @@ var curCookie;
 		cZip = cZip.split("=")[1];
 		$("#zipInput").val(""+cZip+"");
 		$("#carSelect").val(""+cCar+"");*/
-		var cCar = getCookie("car");
-		var cZip = getCookie("zip");
+		cCar = getCookie("car");
+		cZip = getCookie("zip");
+		cFee = getCookie("fee");
 		$("#zipInput").val(""+cZip+"");
 		$("#carSelect").val(""+cCar+"");
+		$("#distFee").empty().append("$"+cFee+".00");
 		
 	} else{
 /*		alert(curCookie);
@@ -38,10 +43,12 @@ var curCookie;
 		var cZip = false;*/
 		document.cookie = "car=sedan;";
 		document.cookie = "zip=32804;";
-		var cCar = "sedan";
-		var cZip = "32804";
+		cCar = "sedan";
+		cZip = "32804";
+		cFee = "10";
 		$("#zipInput").val(""+cZip+"");
 		$("#carSelect").val(""+cCar+"");
+		$("#distFee").empty().append("$"+cFee+".00");
 		//alert(false);
 	}
 
@@ -135,7 +142,24 @@ price = pTruckL;
 }
 return price;	
 }	
-	
+
+function curCarSelectedBotLabel(car){
+	var title;
+	if(car == "sedan"){
+title = packPageBotCarTitle[0];
+} else if(car == "coupe"){
+title = packPageBotCarTitle[1];
+} else if(car == "suv"){
+title = packPageBotCarTitle[2];
+} else if(car == "caravan"){
+title = packPageBotCarTitle[3];
+} else if(car == "truck"){
+title = packPageBotCarTitle[4];
+} else if(car == "truckL"){
+title = packPageBotCarTitle[5];
+}
+return title;	
+}
 
 	
 
@@ -296,13 +320,19 @@ function checkZip(zipFound, zipArray){
 	function changePricing(car){
 	
 	var price = curCarSelected(car);
+	var botTitle = curCarSelectedBotLabel(car);
 //$(".bgBox-alt-bg1-end h2").empty().append("$"+ price[0] +".00<sup>*</sup>");
 //$(".bgBox-alt-bg2-end h2").empty().append("$"+ price[1] +".00<sup>*</sup>");
 //$(".bgBox-alt-bg3-end h2").empty().append("$"+ price[2] +".00<sup>*</sup>");
-$(".bgBox-alt-bg1-end h2").empty().append("$"+ price[0] +".00");
-$(".bgBox-alt-bg2-end h2").empty().append("$"+ price[1] +".00");
-$(".bgBox-alt-bg3-end h2").empty().append("$"+ price[2] +".00");		
+		$(".bgBox-alt-bg1-end h2").empty().append("$"+ price[0] +".00");
+		$(".bgBox-alt-bg2-end h2").empty().append("$"+ price[1] +".00");
+		$(".bgBox-alt-bg3-end h2").empty().append("$"+ price[2] +".00");
+		$(".bgBox-alt-bg1-end small").empty().append(botTitle);
+		$(".bgBox-alt-bg2-end small").empty().append(botTitle);
+		$(".bgBox-alt-bg3-end small").empty().append(botTitle);
 	}
+	
+
 	function changeDistFee(distPrice,distBotTitle){
 		var price = distPrice;
 		var botTitle = distBotTitle;
@@ -337,6 +367,7 @@ $("#zipInput").focusout(function(){
 		  $("#distFee").empty().append("$"+ curDistPrice +".00").removeClass("distFeeSpecial");
 		  $("#zipInput").removeClass("zipCodeError");
 			document.cookie = "zip="+curZip;
+			document.cookie = "fee="+curDistPrice;
 			changeDistFee(curDistPrice,curDistBotTitle);
 			//alert(document.cookie);
 		  
@@ -366,6 +397,7 @@ $('#zipInput').keypress(function (e) {
 		  $("#distFee").empty().append("$"+ curDistPrice +".00").removeClass("distFeeSpecial");
 		  $("#zipInput").removeClass("zipCodeError");
 			document.cookie = "zip="+curZip;
+			document.cookie = "fee="+curDistPrice;
 			//alert(document.cookie);
 			return false;
 		  
