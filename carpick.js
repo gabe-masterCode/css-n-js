@@ -358,7 +358,9 @@ $('#zipInput').keypress(function (e) {
 		  
 		  curZip = zips[""+ curZip +""]["zip"];
 		  curDist = zips[""+ curZip +""]["distance"];
-		  curDistPrice = distPrice(curDist, distFee, false);
+		  curCappedDistInfo =  distPrice(curDist, distFee, packPageBotDistTitle, false);
+		  curDistPrice = curCappedDistInfo[0];
+		  curDistBotTitle = curCappedDistInfo[1];
 		  //alert("found zip: "+ curZip+" distance:"+ curDist);
 		  
 		  $("#distFee").empty().append("$"+ curDistPrice +".00").removeClass("distFeeSpecial");
