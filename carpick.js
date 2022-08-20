@@ -57,7 +57,7 @@ var vTruck = $('#detail-wash-truck-2-doors');
 var vTruckLarge = $('#detail-wash-truck-large-3-doors-4-doors');
 
 
-const distFee = ["10","15","25","50","E-mail us for specialty projects."];
+const distFee = ["10","15","25","50","<b>Contact us.</b>"];
 const carTypes = [vSedan,vCoupe,vSUV,vCaravan,vTruck,vTruckLarge];
 const carSelection = ["sedan","coupe","suv","caravan","truck","truckL"];
 //basic-vip-showroom-machine
@@ -72,37 +72,47 @@ var curItem;
 var selectedCarType;
 const selectedCarTypeLabel = ["Sedan","Coupe","SUV","Caravan","Truck 2 Door","Truck 3/4 Door"];
 var outofbounds = false;
+var packPageBotCarTitle = ["For Sedans Starting from:","For Coupes Starting from:","For SUVs Starting from:","For Caravans Starting from:","For Trucks (2-Door) Starting from:","For Trucks (3/4-Door) Starting from:","Starting from:"];
+var packPageBotDistTitle = ["+ Service Distance Charge: $"+ distFee[0] +".00","+ Service Distance Charge: $"+ distFee[1] +".00","+ Service Distance Charge: $"+ distFee[2] +".00","+ Service Distance Charge: $"+ distFee[3] +".00","+ Service Distance Charge: "+ distFee[4]];
 
-function distPrice(zipDist, distFee, outofbounds){
+function distPrice(zipDist, distFee, distBotTitle, outofbounds){
 	
-	var price;
+	//var price;
+	var returnInfo = [];
 	
 	if(outofbounds == true){
-		
-		return distFee[4];
+		returnInfo[0] = distFee[4];
+		returnInfo[1] = distBotTitle[4];
+		return returnInfo;
 		
 	} else{
 	
 	if((zipDist < 9.5)&&(zipDist >= 0)){
 	   // is less than 9.5 miles but greater than 0 miles
-		price = distFee[0];
+		returnInfo[0] = distFee[0];
+		returnInfo[1] = distBotTitle[0];
 		
 	   } else if((zipDist < 14.5)&&(zipDist >= 9.5)){
 		  // is less than 14.5 miles but greater than 9.5 miles 
-	   		price = distFee[1];
+	   		returnInfo[0] = distFee[1];
+			returnInfo[1] = distBotTitle[1];
 	   } else if((zipDist < 24.5)&&(zipDist >= 14.5)){
 		   // is less than 24.5 miles but greater than 14.5 miles 
-	   		price = distFee[2];
+	   		returnInfo[0] = distFee[2];
+			returnInfo[1] = distBotTitle[2];
 	   } else if((zipDist <= 60)&&(zipDist >= 24.5)){
 		   // is less than or equal to 60 miles but greater than 24.5 miles 
-	   		price = distFee[3];
+	   		returnInfo[0] = distFee[3];
+			returnInfo[1] = distBotTitle[3];
 	   } else {
 		   // is out of bounds anyways
-		   return distFee[4];
+		   	returnInfo[0] = distFee[4];
+			returnInfo[1] = distBotTitle[4];
+			return returnInfo;
 		   
 	   }
 	
-		return price;
+		return returnInfo;
 		
 	}
 	
@@ -274,8 +284,10 @@ $(".closeBox").click(function(){
 
 var curZip = $("#zipInput").val();
 var curCar = $("#carSelect").val();
+var curCappedDistInfo = [];
 var curDist;
 var curDistPrice;
+var curDistBotTitle;
 function checkZip(zipFound, zipArray){
 	
 	
@@ -284,12 +296,20 @@ function checkZip(zipFound, zipArray){
 	function changePricing(car){
 	
 	var price = curCarSelected(car);
-$(".bgBox-alt-bg1-end h2").empty().append("$"+ price[0] +".00<sup>*</sup>");
-$(".bgBox-alt-bg2-end h2").empty().append("$"+ price[1] +".00<sup>*</sup>");
-$(".bgBox-alt-bg3-end h2").empty().append("$"+ price[2] +".00<sup>*</sup>");
-		
+//$(".bgBox-alt-bg1-end h2").empty().append("$"+ price[0] +".00<sup>*</sup>");
+//$(".bgBox-alt-bg2-end h2").empty().append("$"+ price[1] +".00<sup>*</sup>");
+//$(".bgBox-alt-bg3-end h2").empty().append("$"+ price[2] +".00<sup>*</sup>");
+$(".bgBox-alt-bg1-end h2").empty().append("$"+ price[0] +".00");
+$(".bgBox-alt-bg2-end h2").empty().append("$"+ price[1] +".00");
+$(".bgBox-alt-bg3-end h2").empty().append("$"+ price[2] +".00");		
 	}
-	
+	function changeDistFee(distPrice,distBotTitle){
+		var price = distPrice;
+		var botTitle = distBotTitle;
+		$(".bgBox-alt-bg1-end em").empty().append(botTitle);
+		$(".bgBox-alt-bg2-end em").empty().append(botTitle);
+		$(".bgBox-alt-bg3-end em").empty().append(botTitle);	
+	}
 changePricing(curCar);	
 	
 $("#carSelect").change(function(){
@@ -309,12 +329,15 @@ $("#zipInput").focusout(function(){
 		  
 		  curZip = zips[""+ curZip +""]["zip"];
 		  curDist = zips[""+ curZip +""]["distance"];
-		  curDistPrice = distPrice(curDist, distFee, false);
+		  curCappedDistInfo =  distPrice(curDist, distFee, packPageBotDistTitle, false);
+		  curDistPrice = curCappedDistInfo[0];
+		  curDistBotTitle = curCappedDistInfo[1];
 		  //alert("found zip: "+ curZip+" distance:"+ curDist);
 		  
 		  $("#distFee").empty().append("$"+ curDistPrice +".00").removeClass("distFeeSpecial");
 		  $("#zipInput").removeClass("zipCodeError");
 			document.cookie = "zip="+curZip;
+			changeDistFee(curDistPrice,curDistBotTitle);
 			//alert(document.cookie);
 		  
 	  } else {
@@ -359,4 +382,3 @@ $('#zipInput').keypress(function (e) {
 });
 	
 });// JavaScript Document
-
