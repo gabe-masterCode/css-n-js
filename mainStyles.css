@@ -1,0 +1,571 @@
+@charset "utf-8";
+/* CSS Document */
+.header-title-logo img{
+    z-index: 3 !important;
+    position: absolute!important;
+}
+.header-title-logo{
+ height: 70px!important; 
+ margin-left:0vw!important;
+}
+
+.header .header-announcement-bar-wrapper{
+  padding-top:0px!important;
+  padding-bottom:20px!important;
+  height:70px!important;
+  //background-color:red;
+  text-align: center!important;
+}
+.header {
+//background-image:url('https://static1.squarespace.com/static/62b5c4eda17a8f4c421a83a6/t/62b61453ecc2581dc792de78/1656099923764/menubg.jpg');
+background-repeat:no-repeat!important;
+background-size:cover!important;
+background-position: center -800px!important;
+//height:400px;
+  //background: transparent;
+}
+
+@media only screen and (max-width:640px){
+.header {
+//background-image:url('https://static1.squarespace.com/static/62b5c4eda17a8f4c421a83a6/t/62b61453ecc2581dc792de78/1656099923764/menubg.jpg');
+background-repeat:no-repeat!important;
+background-size:cover!important;
+background-position: center!important;
+} 
+}
+
+
+
+#siteWrapper .header-actions-action--cta .sqs-button-element--primary{
+  background-color: #52eee2!important;
+}
+#siteWrapper .header-actions-action--cta .sqs-button-element--primary:hover{
+  background-color: #FFCC00!important;
+  opacity:100%;
+}
+
+.sqs-video-background-native{
+  background-position: center 100px!important;
+  position: absolute;
+  top:-100px!important;
+}
+.page-section{
+  background-color:rgba(0, 0, 0, 1)!important;
+  
+}
+
+footer{
+  //background-image:url('https://static1.squarespace.com/static/62bc64ab54ede01b043ce17b/t/62bd38c875aa611f1239f6cb/1656568008131/footerbgfade.png');
+  
+}
+
+@font-face {
+  font-family: RunnerFont;
+  src: url(https://static1.squarespace.com/static/62bc64ab54ede01b043ce17b/t/62bd4262fbba2d3707890b4d/1656570466843/BLADRMF_.TTF);
+}
+
+#siteWrapper.site-wrapper .sqs-button-element--secondary{
+  font-family:'RunnerFont'!important;
+  font-size:48px!important;
+}
+
+
+
+
+#siteWrapper.site-wrapper .sqs-button-element--tertiary{
+ background-color:rgba(0.2,0.2,0.2,.2)!important;
+}
+#siteWrapper.site-wrapper .sqs-button-element--tertiary:hover{
+ background-color:rgba(0.2,0.2,0.2,.6)!important;
+}
+
+.packagesIMGs_Main{
+  
+}
+
+.sqs-block-code{
+ // font-size: 20px;
+ // z-index:20;
+ // position: absolute;
+  //visibility: hidden;
+  //padding:5px 10px;
+  //min-height:100% !important;
+ // min-width:400px !important;
+  //text-align: center;
+  //object-fit: fill;
+  //flex-flow:column;
+ // flex-grow:1;
+  display:flex!important;
+ //background-color:black;
+}
+.sqs-block-code .sqs-block-content, .bgBox{
+  //background-color:green;
+  min-height:100% !important;
+  min-width:100%!important;
+  display:block!important;
+}
+
+.noselect {
+  -webkit-touch-callout: none!important; /* iOS Safari */
+    -webkit-user-select: none!important; /* Safari */
+     -khtml-user-select: none!important; /* Konqueror HTML */
+       -moz-user-select: none!important; /* Old versions of Firefox */
+        -ms-user-select: none!important; /* Internet Explorer/Edge */
+            user-select: none!important; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+//-------------------//
+//-------------------//
+//-------------------//
+//-------------------//
+/* Reviews Section*/
+.reviews{
+font-size: 20px;
+  z-index:9;
+  position: absolute;
+  //visibility: hidden;
+  padding:0px 0px;
+  text-align: center;
+  min-height:100%;
+  width:100%;
+  //display:;
+  //cursor:pointer;
+  //background-color:blue;
+  display:block;
+}
+.reviews:hover{
+  //background-color:blue;
+}
+
+/* stars' div container*/
+.reviewerStars{
+  width:300px;
+  height:100px;
+//background-color:black;
+  width:100%;
+  //position:absolute;
+  margin-top:-100px;
+  z-index:10;
+  padding-bottom:80px;
+}
+
+.reviewerStarsGrouped{
+// background-image: url('https://images.squarespace-cdn.com/content/v1/62bc64ab54ede01b043ce17b/13c588e9-a953-4d3f-a01c-d870559b5d96/reviewstarsgrouped.png');
+
+background-repeat:no-repeat;
+
+background-size:cover;
+
+background-position: center;
+//border: 10px;
+//border-color:green;
+  //display:block;
+  position:absolute;
+  //background-color:green;
+  height:150px;
+  //height:calc(150px + 2vw);
+	width:100%;
+    //margin-left:120px;
+  margin-top:-120px;
+  //background-size:10px 10px;
+}
+.reviewerStarsGrouped img{
+  //padding-top:30px;
+  padding-top:10%;
+  //width:80%;
+width: calc(80% + 1vw);
+}
+
+/* stars themselves */
+.revStars{
+background-image: url('https://images.squarespace-cdn.com/content/v1/62bc64ab54ede01b043ce17b/005e7137-c8c6-4193-bdc4-281a424a6783/reviewStar.png');
+
+background-repeat:no-repeat;
+
+background-size:cover;
+
+background-position: center;
+//border: 10px;
+//border-color:green;
+  //display:block;
+  position:absolute;
+}
+
+
+#reviewStar1{
+height:50px;
+width:50px;
+  margin-left:0px;
+}
+
+#reviewStar2{
+height:80px;
+width:80px;
+ margin-left:60px;
+ margin-top:-40px;
+}
+
+#reviewStar3{
+height:150px;
+width:150px;
+    margin-left:120px;
+  margin-top:-100px;
+}
+
+#reviewStar4{
+height:80px;
+width:80px;
+ margin-left:260px;
+ margin-top:-40px;
+}
+
+#reviewStar5{
+height:50px;
+width:50px;
+    margin-left:330px;
+}
+
+/* reviewer icon name stats feedback*/
+.reviewerIcon{
+  //background-image: url('https://images.squarespace-cdn.com/content/v1/62bc64ab54ede01b043ce17b/90a5d3c1-470c-4b19-a632-9f9029d8e7e3/reviewthumb.png');
+  background-image: url('https://static1.squarespace.com/static/62bc64ab54ede01b043ce17b/t/62cdc057e78fba16702d20c2/1657651287224/claytonreviewthumbstars.png');
+background-repeat:no-repeat;
+
+background-size:contain;
+
+background-position: center;
+//border: 10px;
+//border-color:green;
+  //display:block;
+  //position:absolute;
+  display:block;
+  height:200px;
+  width:100%;
+  background-color:transparent;//#000000;
+  margin-top:-100px;
+}
+.reviewerName{
+  font-weight:bold;
+  //font-size:14px;
+  font-size: calc(10px + 1vw);
+  margin-top:-50px;
+}
+.reviewerNumReviewsPhotos{
+  font-size: calc(12px + 1vw);
+}
+.reviewerFeedback{
+font-size: calc(12px + .05vw);
+//font-size: calc(12px + .5%);
+}
+#promoFeedback{
+  font-size: calc(16px + .05vw);
+}
+.reviewerServicesUsed{
+font-size:12px;
+}
+
+#review2 .reviewerIcon{
+    //background-image: url('https://static1.squarespace.com/static/62bc64ab54ede01b043ce17b/t/62bf2e622e18012b6a5b5b31/1656696418296/reviewthumbmichaellinardi.png');
+  	background-image: url('https://static1.squarespace.com/static/62bc64ab54ede01b043ce17b/t/62cdc053dd0cdc159ff8550e/1657651284028/reviewthumbmichaellinardistars.png');
+}
+#review3 .reviewerIcon{
+    //background-image: url('https://static1.squarespace.com/static/62bc64ab54ede01b043ce17b/t/62bf31543544e81c99952703/1656697172831/krisyoungreviewthumb.png');
+  	background-image: url('https://static1.squarespace.com/static/62bc64ab54ede01b043ce17b/t/62cdc04a7aa995305dc70f1d/1657651274659/krisyoungreviewthumbStars.png');
+}
+
+.reviewerIconModded img{
+  width:50%;
+  padding-bottom: 40px;
+  
+}
+
+.truncator{
+  width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.Off{
+  display:none!important;
+  visibility:none!important;
+}
+.dropShadow1{
+text-shadow: 2px 2px 4px #000000;
+}
+
+.sqs-video-background-native{
+height:100%;
+  //padding-top:-200px;
+  margin-top:100px;
+}
+
+
+.header-menu-nav-folder{
+  background-image:url('https://static1.squarespace.com/static/62bc64ab54ede01b043ce17b/t/62cde419026c9d6ad729781c/1657660441523/mobileFolderMenuBG.png');
+background-repeat:repeat-x;
+
+background-size:fill;
+
+background-position: bottom;
+ //margin-top:200px;
+}
+.header-nav-item--collection{
+  text-shadow: 2px 2px 2px #000000;
+  //background-color:#52eee2;
+  padding-left:1vw;
+  padding-right:1vw;
+  padding-top:1vw;
+  padding-bottom:1vw;
+}
+.header-nav-item:hover{
+  background-color:#52eee2;
+  border:20px;
+}
+
+
+//--------------------Modded Button style for Appointments
+.moddedButton:hover{
+  background:#52eee2 !important;
+}
+.moddedButton{
+color: #00000; padding: 24px 0px!important; border: 0px; -webkit-box-shadow: 0 -2px 0 rgba(0,0,0,0.15) inset;-moz-box-shadow: 0 -2px 0 rgba(0,0,0,0.15) inset;box-shadow: 0 -2px 0 rgba(0,0,0,0.15) inset;border-radius: 0px 0px 20px 20px !important; text-decoration: none; display: inline-block; width:100%;text-align:center;
+  background-color:rgba(.2,.2,.2,.2)!important;
+  backdrop-filter: blur(5px)!important;
+  font-size: calc(20px + .05vw)!important;
+}
+
+.moddedButtonV2:hover{
+  background:#52eee2 !important;
+}
+
+.moddedButtonV2{
+padding: 24px 0px!important; border: 0px; -webkit-box-shadow: 0 -2px 0 rgba(0,0,0,0.15) inset;-moz-box-shadow: 0 -2px 0 rgba(0,0,0,0.15) inset;box-shadow: 0 -2px 0 rgba(0,0,0,0.15) inset;border-radius: 4px; text-decoration: none; display: inline-block; width:100%;text-align:center;
+  background-color:#111111!important;
+  backdrop-filter: blur(5px)!important;
+  font-size: calc(20px + .05vw)!important;
+}
+
+
+.moddedButtonEnd1:hover,.moddedButtonEnd2:hover,.moddedButtonEnd3:hover{
+  //background:#52eee2 !important;
+ text-decoration: underline!important;
+  font-weight:bolder;
+}
+.moddedButtonEnd1,.moddedButtonEnd2,.moddedButtonEnd3{
+color: #00000; padding: 24px 0px!important; border: 0px; -webkit-box-shadow: 0 -2px 0 rgba(0,0,0,0.15) inset;-moz-box-shadow: 0 -2px 0 rgba(0,0,0,0.15) inset;box-shadow: 0 -2px 0 rgba(0,0,0,0.15) inset;border-radius: 0px 0px 20px 20px !important; text-decoration: none; display: inline-block; width:100%;text-align:center;
+ backdrop-filter: blur(5px)!important;
+  font-size: calc(20px + .05vw)!important;
+}
+//.moddedButtonEnd1{background-color:#0032c8 !important;}
+//.moddedButtonEnd2{background-color:#ffcc00 !important;}
+//.moddedButtonEnd3{background-color:#fe42ad !important;}
+
+.moddedButtonEnd1{background-color:#0032c8 !important; 
+  //color:black !important; 
+  font-size:20px!important;
+  font-weight:bold!important;}
+.moddedButtonEnd2{background-color:#ffcc00 !important; 
+  //color:black !important; 
+  font-size:20px!important;
+  font-weight:bold!important;}
+.moddedButtonEnd3{background-color:#fe42ad !important; 
+  //color:black !important; 
+  font-size:20px!important;
+  font-weight:bold!important;}
+
+//--------------------modded headers, paragraphs
+
+.moddedH2{
+  font-size: calc(45px + .05vw);
+  
+}
+
+.bgBox-white{
+  background-color:white!important;
+  width:100%;height:100%;
+}
+.bgBox-black{
+  background-color:black!important;
+  width:100%;height:100%;
+}
+
+.bgBox{
+  background-color:rgba(.2,.2,.2,.4)!important;
+  backdrop-filter: blur(8px)!important;
+  width:100%;height:100%;
+  z-depth:0!important;
+}
+.bgBox-alt{
+  background-color:rgba(255,255,255,.1)!important;
+  backdrop-filter: blur(10px)!important;
+  width:100%;height:100%;
+  z-depth:0!important;
+}
+
+.bgBox-alt-bg1,.bgBox-alt-bg2,.bgBox-alt-bg3{
+  //background-color:rgba(0,200,200,.2);
+  //backdrop-filter: blur(5px);
+  width:100%;height:180px;
+  z-depth:0!important;
+  border-radius: 20px 20px 0px 0px;
+  padding-bottom: 20px;
+  display:block;
+}
+.bgBox-alt-bg1-end,.bgBox-alt-bg2-end,.bgBox-alt-bg3-end{
+  //background-color:rgba(0,200,200,.2);
+  //backdrop-filter: blur(5px);
+  width:100%;height:220px;
+  z-depth:0!important;
+  border-radius: 0px 0px 20px 20px;
+  background-color:#253551!important;
+}
+.bgBox-alt-bg1, .bgBox-alt-bg1-end{
+  //background-color:rgba(0,50,200,1);
+  background-color:#0032c8;
+}
+.bgBox-alt-bg2, .bgBox-alt-bg2-end{
+  //background-color:rgba(82,238,226,1);
+  background-color:#52eee2;
+ 
+}
+.bgBox-alt-bg3, .bgBox-alt-bg3-end{
+  //background-color:rgba(254,66,173,1);
+  background-color:#fe42ad;
+}
+.bgBox-alt-bg1-end h3{
+   //-webkit-text-stroke: 1px #0032c8;
+  /* color: white;
+   text-shadow:
+       1px 1px 0px #0032c8,
+     -1px -1px 0 #0032c8,  
+     1px -1px 0 #0032c8,
+      -1px 1px 0 #0032c8,
+       1px 1px 0 #0032c8;*/
+}
+.bgBox-alt-bg2-end h3{
+   //-webkit-text-stroke: 1px #0032c8;
+   /*color: white;
+   text-shadow:
+       1px 1px 0px #ffcc00,
+     -1px -1px 0 #ffcc00,  
+     1px -1px 0 #ffcc00,
+      -1px 1px 0 #ffcc00,
+       1px 1px 0 #ffcc00;*/
+}
+.bgBox-alt-bg3-end h3{
+   //-webkit-text-stroke: 1px #0032c8;
+    /*color: white;
+  text-shadow:
+       1px 1px 0px #fe42ad,
+     -1px -1px 0 #fe42ad,  
+     1px -1px 0 #fe42ad,
+      -1px 1px 0 #fe42ad,
+       1px 1px 0 #fe42ad;*/
+}
+
+//#0032c8
+//#52eee2
+//#fe42ad
+//#ffcc00
+//#253551
+
+
+.bgBox-alt-bg1-end{
+  //background-image:url("https://static1.squarespace.com/static/62f917d7dce9664aeece43d9/t/63013199ddbd691bfa3400d0/1661022617354/hrbot1.png")!important;
+  //background-repeat: repeat-x;
+  //background-position: top;
+}
+.bgBox-alt-bg2-end{
+  //background-image:url("https://static1.squarespace.com/static/62f917d7dce9664aeece43d9/t/6301319e9470670078fda1ed/1661022622696/hrbot2.png")!important;
+ // background-repeat: repeat-x;
+ // background-position: top;
+}
+.bgBox-alt-bg3-end{
+  //background-image:url("https://static1.squarespace.com/static/62f917d7dce9664aeece43d9/t/630131a6e41bc70144a9f302/1661022630278/hrbot3.png")!important;
+  //background-repeat: repeat-x;
+ // background-position: top;
+}
+//https://static1.squarespace.com/static/62f917d7dce9664aeece43d9/t/63013199ddbd691bfa3400d0/1661022617354/hrbot1.png
+//https://static1.squarespace.com/static/62f917d7dce9664aeece43d9/t/6301319e9470670078fda1ed/1661022622696/hrbot2.png
+//https://static1.squarespace.com/static/62f917d7dce9664aeece43d9/t/630131a6e41bc70144a9f302/1661022630278/hrbot3.png
+//#0032c8
+//#52eee2
+//#fe42ad
+.sqs-block-code{
+  //display: inline!important;
+  padding: 0px!important;
+  margin: 0px!important;
+}
+/*
+.sqs-block-code .bgBox:hover{
+ background-color:rgba(0,0,0,1)!important;
+}
+*/
+
+
+///-----------------------------------------------------------------packages
+
+#detail-wash-car-thumb-div-container{
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  z-index: 20;
+  //background-color: red;
+  //margin-left: -8vw;
+  display:flex;
+  flex-wrap: wrap;
+  //flex-direction: column;
+}
+.detail-wash-car-thumb-div{
+ display: grid;
+  //position: fixed;
+  width: 30px;
+  height: 40px;
+  //flex-flow: grid;
+  //display:grid;
+  flex:4%;
+  margin-left:1%;
+  margin-right:1%;}
+
+.car-type-image-for-detailing-washing{
+    border-radius: 10px;
+   // border-color: white;
+    //border-style: double;
+   // border-width: 2px;
+}
+.car-type-image-for-detailing-washing:hover{
+border-color:yellow;
+  
+}
+.detail-wash-car-selection-chosen{
+visibility:none;
+display:none;
+}
+.detail-wash-car-selection-name, .detail-wash-car-selection-chosen{
+font-weight:none;
+width:100%;
+text-align:center; 
+}
+
+#detail-wash-car-thumb-div-container img{
+    border-radius:20px;
+    //border-color:white;
+    //border-style:double;
+    //border-width: 2px;
+}
+#detail-wash-car-thumb-div-container img:hover{
+border-color:yellow;
+}
+.chosenCar{
+visibility: visible!important;
+//font-weight: bold!important;
+text-decoration: underline;
+display: inline!important;
+}
+.selected-car-type, .selected-car-type:hover{
+border-color:white !important;
+     border-color:white;
+    border-style:double;
+    border-width: 2px;
+}
