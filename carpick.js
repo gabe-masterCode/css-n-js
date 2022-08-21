@@ -333,14 +333,39 @@ function checkZip(zipFound, zipArray){
 	}
 	
 
-	function changeDistFee(distPrice,distBotTitle){
-		var price = distPrice;
-		var botTitle = distBotTitle;
-		$(".bgBox-alt-bg1-end em").empty().append(botTitle);
-		$(".bgBox-alt-bg2-end em").empty().append(botTitle);
-		$(".bgBox-alt-bg3-end em").empty().append(botTitle);	
+	function changeDistFee(){
+		 curZip = $("#zipInput").val();
+	  
+		if(zips[""+ curZip +""]){
+		  
+		  curZip = zips[""+ curZip +""]["zip"];
+		  curDist = zips[""+ curZip +""]["distance"];
+		  curCappedDistInfo =  distPrice(curDist, distFee, packPageBotDistTitle, false);
+		  curDistPrice = curCappedDistInfo[0];
+		  curDistBotTitle = curCappedDistInfo[1];
+		  //alert("found zip: "+ curZip+" distance:"+ curDist);
+		  
+		  $("#distFee").empty().append("$"+ curDistPrice +".00").removeClass("distFeeSpecial");
+		  $("#zipInput").removeClass("zipCodeError");
+			
+		$(".bgBox-alt-bg1-end em, .bgBox-alt-bg2-end em, .bgBox-alt-bg3-end em").empty().append(curDistBotTitle);
+		
+		}else{
+			
+		  curDistPrice = distFee[4];
+		  curDistBotTitle = packPageBotDistTitle[4];
+		  //alert("Zip not found or out of bounds: "+ curZip +", "+ curDistPrice);
+		  $(".bgBox-alt-bg1-end em, .bgBox-alt-bg2-end em, .bgBox-alt-bg3-end em").empty().append(curDistBotTitle);
+		  $("#distFee").empty().append(""+ curDistPrice +"").addClass("distFeeSpecial");
+		  $("#zipInput").addClass("zipCodeError");
+			
+		}
+		
+		
 	}
 changePricing(curCar);	
+changeDistFee();
+//changeDistFee($().,distBotTitle);
 	
 $("#carSelect").change(function(){
 	
@@ -354,10 +379,10 @@ $("#carSelect").change(function(){
 $("#zipInput").focusout(function(){
 		
 	  curZip = $("#zipInput").val();
-	  
+	  changeDistFee();
 		if(zips[""+ curZip +""]){
-		  
-		  curZip = zips[""+ curZip +""]["zip"];
+		 /* 
+/*		  curZip = zips[""+ curZip +""]["zip"];
 		  curDist = zips[""+ curZip +""]["distance"];
 		  curCappedDistInfo =  distPrice(curDist, distFee, packPageBotDistTitle, false);
 		  curDistPrice = curCappedDistInfo[0];
@@ -365,7 +390,7 @@ $("#zipInput").focusout(function(){
 		  //alert("found zip: "+ curZip+" distance:"+ curDist);
 		  
 		  $("#distFee").empty().append("$"+ curDistPrice +".00").removeClass("distFeeSpecial");
-		  $("#zipInput").removeClass("zipCodeError");
+		  $("#zipInput").removeClass("zipCodeError");*/*/
 			document.cookie = "zip="+curZip;
 			document.cookie = "fee="+curDistPrice;
 			changeDistFee(curDistPrice,curDistBotTitle);
@@ -373,10 +398,10 @@ $("#zipInput").focusout(function(){
 		  
 	  } else {
 		  
-		  curDistPrice = distFee[4];
+		  //curDistPrice = distFee[4];
 		  //alert("Zip not found or out of bounds: "+ curZip +", "+ curDistPrice);
-		  $("#distFee").empty().append(""+ curDistPrice +"").addClass("distFeeSpecial");
-		  $("#zipInput").addClass("zipCodeError");
+		  //$("#distFee").empty().append(""+ curDistPrice +"").addClass("distFeeSpecial");
+		  //$("#zipInput").addClass("zipCodeError");
 	  }
 						});
 	
@@ -384,18 +409,18 @@ $('#zipInput').keypress(function (e) {
   if (e.which == 13) {
 	  
    	  curZip = $("#zipInput").val();
-	  
+	  changeDistFee();
 		if(zips[""+ curZip +""]){
 		  
-		  curZip = zips[""+ curZip +""]["zip"];
+		 /* /*curZip = zips[""+ curZip +""]["zip"];
 		  curDist = zips[""+ curZip +""]["distance"];
 		  curCappedDistInfo =  distPrice(curDist, distFee, packPageBotDistTitle, false);
 		  curDistPrice = curCappedDistInfo[0];
-		  curDistBotTitle = curCappedDistInfo[1];
+		  curDistBotTitle = curCappedDistInfo[1];*/*/
 		  //alert("found zip: "+ curZip+" distance:"+ curDist);
 		  
-		  $("#distFee").empty().append("$"+ curDistPrice +".00").removeClass("distFeeSpecial");
-		  $("#zipInput").removeClass("zipCodeError");
+		  /*$("#distFee").empty().append("$"+ curDistPrice +".00").removeClass("distFeeSpecial");
+		  $("#zipInput").removeClass("zipCodeError");*/
 			document.cookie = "zip="+curZip;
 			document.cookie = "fee="+curDistPrice;
 			//alert(document.cookie);
@@ -403,10 +428,10 @@ $('#zipInput').keypress(function (e) {
 		  
 	  } else {
 		  
-		  curDistPrice = distFee[4];
+		  /*curDistPrice = distFee[4];
 		  //alert("Zip not found or out of bounds: "+ curZip +", "+ curDistPrice);
 		  $("#distFee").empty().append(""+ curDistPrice +"").addClass("distFeeSpecial");
-		  $("#zipInput").addClass("zipCodeError");
+		  $("#zipInput").addClass("zipCodeError");*/
 		  return false;
 	  }
 	  
