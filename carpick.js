@@ -327,9 +327,7 @@ function checkZip(zipFound, zipArray){
 		$(".bgBox-alt-bg1-end h2").empty().append("$"+ price[0] +".00");
 		$(".bgBox-alt-bg2-end h2").empty().append("$"+ price[1] +".00");
 		$(".bgBox-alt-bg3-end h2").empty().append("$"+ price[2] +".00");
-		$(".bgBox-alt-bg1-end small").empty().append(botTitle);
-		$(".bgBox-alt-bg2-end small").empty().append(botTitle);
-		$(".bgBox-alt-bg3-end small").empty().append(botTitle);
+		$(".bgBox-alt-bg1-end small,.bgBox-alt-bg2-end small,.bgBox-alt-bg3-end small").empty().append(botTitle);
 	}
 	
 
