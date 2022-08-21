@@ -381,7 +381,7 @@ $("#zipInput").focusout(function(){
 	  curZip = $("#zipInput").val();
 	  changeDistFee();
 		if(zips[""+ curZip +""]){
-		 /* 
+		 
 /*		  curZip = zips[""+ curZip +""]["zip"];
 		  curDist = zips[""+ curZip +""]["distance"];
 		  curCappedDistInfo =  distPrice(curDist, distFee, packPageBotDistTitle, false);
@@ -390,7 +390,7 @@ $("#zipInput").focusout(function(){
 		  //alert("found zip: "+ curZip+" distance:"+ curDist);
 		  
 		  $("#distFee").empty().append("$"+ curDistPrice +".00").removeClass("distFeeSpecial");
-		  $("#zipInput").removeClass("zipCodeError");*/*/
+		  $("#zipInput").removeClass("zipCodeError");*/
 			document.cookie = "zip="+curZip;
 			document.cookie = "fee="+curDistPrice;
 			changeDistFee(curDistPrice,curDistBotTitle);
@@ -412,11 +412,11 @@ $('#zipInput').keypress(function (e) {
 	  changeDistFee();
 		if(zips[""+ curZip +""]){
 		  
-		 /* /*curZip = zips[""+ curZip +""]["zip"];
+		 /* curZip = zips[""+ curZip +""]["zip"];
 		  curDist = zips[""+ curZip +""]["distance"];
 		  curCappedDistInfo =  distPrice(curDist, distFee, packPageBotDistTitle, false);
 		  curDistPrice = curCappedDistInfo[0];
-		  curDistBotTitle = curCappedDistInfo[1];*/*/
+		  curDistBotTitle = curCappedDistInfo[1];*/
 		  //alert("found zip: "+ curZip+" distance:"+ curDist);
 		  
 		  /*$("#distFee").empty().append("$"+ curDistPrice +".00").removeClass("distFeeSpecial");
