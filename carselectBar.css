@@ -18,7 +18,7 @@ html, body{
 	position: fixed!important;
   top:0!important; left:0!important;
   //width: 100%; 
-	z-index: 999!important;
+	z-index: 99!important;
 	 //background-color: rgba(82,238,226,.8)!important;
     //background-color: slategray!important;
     background-color: #0e2032b0!important;
