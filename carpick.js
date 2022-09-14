@@ -13,6 +13,12 @@ $(document).ready(function(){
 	var cCar;
 	var cZip;
 	var cFee;
+	var curZip = $("#zipInput").val();
+	var curCar = $("#carSelect").val();
+	var curCappedDistInfo = [];
+	var curDist;
+	var curDistPrice;
+	var curDistBotTitle;
 function getCookie(name) {
   const value = `; ${document.cookie}`;
   const parts = value.split(`; ${name}=`);
@@ -46,6 +52,8 @@ var curCookie;
 		cCar = "sedan";
 		cZip = "32804";
 		cFee = "10";
+		curCar = cCar;
+		curZip = cZip;
 		$("#zipInput").val(""+cZip+"");
 		$("#carSelect").val(""+cCar+"");
 		$("#distFee").empty().append("$"+cFee+".00");
@@ -306,12 +314,7 @@ $(".closeBox").click(function(){
 
 	});
 
-var curZip = $("#zipInput").val();
-var curCar = $("#carSelect").val();
-var curCappedDistInfo = [];
-var curDist;
-var curDistPrice;
-var curDistBotTitle;
+
 function checkZip(zipFound, zipArray){
 	
 	
