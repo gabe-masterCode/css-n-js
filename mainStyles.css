@@ -248,7 +248,7 @@ background-position: center;
 .reviewerName{
   font-weight:bold;
   //font-size:14px;
-  font-size: calc(10px + .7vw);
+  font-size: calc(10px + .3vw);
   margin-top:-50px;
 }
 .reviewerNumReviewsPhotos{
