@@ -255,7 +255,7 @@ background-position: center;
   font-size: calc(12px + 1vw);
 }
 .reviewerFeedback{
-font-size: calc(10px + .05vw);
+font-size: calc(11px + .05vw);
 //font-size: calc(12px + .5%);
 }
 #promoFeedback{
