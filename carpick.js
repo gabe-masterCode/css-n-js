@@ -327,10 +327,10 @@ function checkZip(zipFound, zipArray){
 //$(".bgBox-alt-bg1-end h2").empty().append("$"+ price[0] +".00<sup>*</sup>");
 //$(".bgBox-alt-bg2-end h2").empty().append("$"+ price[1] +".00<sup>*</sup>");
 //$(".bgBox-alt-bg3-end h2").empty().append("$"+ price[2] +".00<sup>*</sup>");
-		$(".bgBox-alt-bg1-end h2").empty().append("$"+ price[0] +".00");
-		$(".bgBox-alt-bg2-end h2").empty().append("$"+ price[1] +".00");
-		$(".bgBox-alt-bg3-end h2").empty().append("$"+ price[2] +".00");
-		$(".bgBox-alt-bg1-end small,.bgBox-alt-bg2-end small,.bgBox-alt-bg3-end small").empty().append(botTitle);
+		$(".bgBox-alt-bg1-end h2, .carPrice1").empty().append("$"+ price[0] +".00");
+		$(".bgBox-alt-bg2-end h2, .carPrice2").empty().append("$"+ price[1] +".00");
+		$(".bgBox-alt-bg3-end h2, .carPrice3").empty().append("$"+ price[2] +".00");
+		$(".bgBox-alt-bg1-end small,.bgBox-alt-bg2-end small,.bgBox-alt-bg3-end small, .carType").empty().append(botTitle);
 	}
 	
 
@@ -347,6 +347,7 @@ function checkZip(zipFound, zipArray){
 		  //alert("found zip: "+ curZip+" distance:"+ curDist);
 		  
 		  $("#distFee").empty().append("$"+ curDistPrice +".00").removeClass("distFeeSpecial");
+		  $(".distFee1").empty().append("$"+ curDistPrice +".00").removeClass("distFeeSpecial");
 		  $("#zipInput").removeClass("zipCodeError");
 			
 		$(".bgBox-alt-bg1-end em, .bgBox-alt-bg2-end em, .bgBox-alt-bg3-end em").empty().append(curDistBotTitle);
@@ -358,6 +359,7 @@ function checkZip(zipFound, zipArray){
 		  //alert("Zip not found or out of bounds: "+ curZip +", "+ curDistPrice);
 		  $(".bgBox-alt-bg1-end em, .bgBox-alt-bg2-end em, .bgBox-alt-bg3-end em").empty().append(curDistBotTitle);
 		  $("#distFee").empty().append(""+ curDistPrice +"").addClass("distFeeSpecial");
+		  $(".distFee1").empty().append(""+ curDistPrice +"").addClass("distFeeSpecial");
 		  $("#zipInput").addClass("zipCodeError");
 			
 		}
