@@ -363,7 +363,7 @@ var curCookie;
 		$("#distFee").empty().append("$"+cFee+".00");
 		curCar = $("#carSelect").val();
 		document.cookie = "car="+curCar;
-		changePricing(curCar);
+		changePricing(cCar);
 		changeDistFee();
 		
 	} else{
