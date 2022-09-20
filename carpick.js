@@ -475,7 +475,7 @@ var scrollTo = ["#BasicDetailAndWashPackage","#VIPPackage","#ShowroomPackage","#
 		
 	}
 	
-$(".scrollToBDW, .scrollToVIP, .scrollToSHRM, .scrollToMW").click(function({
+$(".scrollToBDW, .scrollToVIP, .scrollToSHRM, .scrollToMW").click(function(){
 	
 	//var button = $(this);
 	
