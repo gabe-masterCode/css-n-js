@@ -477,9 +477,9 @@ var scrollTo = ["#BasicDetailAndWashPackage","#VIPPackage","#ShowroomPackage","#
 	
 $(scrollToBDW,scrollToVIP,scrollToSHRM,scrollToMW).click(function({
 	
-	var button = $(this);
+	//var button = $(this);
 	
-	scrollToFocus(button);
+	scrollToFocus($(this));
 	
 	
 	
