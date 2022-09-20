@@ -450,6 +450,17 @@ $('#zipInput').keypress(function (e) {
 changePricing(curCar);	
 changeDistFee();
 //changeDistFee($().,distBotTitle);	
+
+//$(".scrollToBDW")
+$(".scrollToVIP").scroll('#VIPPackage');
+$(".scrollToSHRM").scroll('#ShowroomPackage');
+//$(".scrollToMW")	
+	
+	
+	
+	
+	
+	
 	
 	
 });// JavaScript Document
