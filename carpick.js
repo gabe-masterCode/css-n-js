@@ -503,7 +503,7 @@ $(".scrollToBDW").click(function(){
 	//var button = $(this);
 	
 	var scrollHere = scrollTo[0];
-	alert(scrollHere);
+	//alert(scrollHere);
 	$('html, body').animate({
                     scrollTop: scrollHere.offset().top
                 }, 200);
@@ -516,7 +516,7 @@ $(".scrollToBDW").click(function(){
 	//var button = $(this);
 	
 	var scrollHere = scrollTo[1];
-	alert(scrollHere);
+	//alert(scrollHere);
 	$('html, body').animate({
                     scrollTop: scrollHere.offset().top
                 }, 200);
@@ -528,7 +528,7 @@ $(".scrollToBDW").click(function(){
 	//var button = $(this);
 	
 	var scrollHere = scrollTo[2];
-	alert(scrollHere);
+	//alert(scrollHere);
 	$('html, body').animate({
                     scrollTop: scrollHere.offset().top
                 }, 200);
@@ -540,7 +540,7 @@ $(".scrollToBDW").click(function(){
 	//var button = $(this);
 	
 	var scrollHere = scrollTo[3];
-	alert(scrollHere);
+	//alert(scrollHere);
 	$('html, body').animate({
                     scrollTop: scrollHere.offset().top
                 }, 200);
