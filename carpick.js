@@ -490,6 +490,7 @@ $(".scrollToBDW, .scrollToVIP, .scrollToSHRM, .scrollToMW").click(function(){
 	//var button = $(this);
 	
 	var scrollHere = scrollToFocus($(this));
+	alert(scrollHere);
 	$('html, body').animate({
                     scrollTop: scrollHere.offset().top
                 }, 200);
