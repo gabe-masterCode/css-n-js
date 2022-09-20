@@ -453,12 +453,35 @@ changeDistFee();
 
 //$(".scrollToBDW")
 //$(".scrollToVIP").scroll('#VIPPackage');
+//$(".scrollToVIP").get(0).scrollIntoView();
 $(".scrollToVIP").get(0).scrollIntoView();
+//$(".scrollToSHRM").get(0).scrollIntoView();
 $(".scrollToSHRM").get(0).scrollIntoView();
 //$(".scrollToSHRM").scroll('#ShowroomPackage');
 //$(".scrollToMW")	
+
+var scrollToBDW = $(".scrollToBDW");
+var scrollToVIP = $(".scrollToVIP");
+var scrollToSHRM = $(".scrollToSHRM");
+var scrollToMW = $(".scrollToMW");
+var scrollTo = ["#BasicDetailAndWashPackage","#VIPPackage","#ShowroomPackage","#MachineWaxService"];
 	
-	
+
+	function scrollToFocus(button){
+		
+		if(button == scrollToBDW){
+			$(scrollTo[0]).scrollTop();
+		} else if(button == scrollToVIP){
+			$(scrollTo[1]).scrollTop();
+		} else if(button == scrollToSHRM){
+			$(scrollTo[2]).scrollTop();
+		} else if(button == scrollToMW){
+			$(scrollTo[3]).scrollTop();
+		}
+		
+		
+		
+	}
 	
 	
 	
