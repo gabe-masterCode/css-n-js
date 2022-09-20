@@ -451,14 +451,6 @@ changePricing(curCar);
 changeDistFee();
 //changeDistFee($().,distBotTitle);	
 
-//$(".scrollToBDW")
-//$(".scrollToVIP").scroll('#VIPPackage');
-//$(".scrollToVIP").get(0).scrollIntoView();
-$(".scrollToVIP").get(0).scrollIntoView();
-//$(".scrollToSHRM").get(0).scrollIntoView();
-$(".scrollToSHRM").get(0).scrollIntoView();
-//$(".scrollToSHRM").scroll('#ShowroomPackage');
-//$(".scrollToMW")	
 
 var scrollToBDW = $(".scrollToBDW");
 var scrollToVIP = $(".scrollToVIP");
