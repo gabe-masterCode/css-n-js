@@ -485,7 +485,7 @@ var scrollTo = [$("#BasicDetailAndWashPackage"),$("#VIPPackage"),$("#ShowroomPac
 		
 	}
 	
-$(".scrollToBDW, .scrollToVIP, .scrollToSHRM, .scrollToMW").click(function(){
+/*$(".scrollToBDW, .scrollToVIP, .scrollToSHRM, .scrollToMW").click(function(){
 	
 	//var button = $(this);
 	
@@ -496,9 +496,56 @@ $(".scrollToBDW, .scrollToVIP, .scrollToSHRM, .scrollToMW").click(function(){
                 }, 200);
 	
 	
+});	*/
+	
+$(".scrollToBDW").click(function(){
+	
+	//var button = $(this);
+	
+	var scrollHere = scrollTo[0];
+	alert(scrollHere);
+	$('html, body').animate({
+                    scrollTop: scrollHere.offset().top
+                }, 200);
+	
+	
+});		
+
+	$(".scrollToVIP").click(function(){
+	
+	//var button = $(this);
+	
+	var scrollHere = scrollTo[1];
+	alert(scrollHere);
+	$('html, body').animate({
+                    scrollTop: scrollHere.offset().top
+                }, 200);
+	
+	
 });	
+	$(".scrollToSHRM").click(function(){
+	
+	//var button = $(this);
+	
+	var scrollHere = scrollTo[2];
+	alert(scrollHere);
+	$('html, body').animate({
+                    scrollTop: scrollHere.offset().top
+                }, 200);
 	
 	
+});	
+	$(".scrollToMW").click(function(){
 	
+	//var button = $(this);
+	
+	var scrollHere = scrollTo[3];
+	alert(scrollHere);
+	$('html, body').animate({
+                    scrollTop: scrollHere.offset().top
+                }, 200);
+	
+	
+});	
 	
 });// JavaScript Document
