@@ -462,22 +462,37 @@ var scrollTo = [$("#BasicDetailAndWashPackage"),$("#VIPPackage"),$("#ShowroomPac
 	function scrollToFocus(button){
 		
 		if(button == scrollToBDW){
-			$(scrollTo[0]).scrollTop();
+			//$(scrollTo[0]).scrollTop();
+			return scrollTo[0];
 		} else if(button == scrollToVIP){
-			$(scrollTo[1]).scrollTop();
+			//$(scrollTo[1]).scrollTop();
+			return scrollTo[1];
 		} else if(button == scrollToSHRM){
-			$(scrollTo[2]).scrollTop();
+			//$(scrollTo[2]).scrollTop();
+			return scrollTo[2];
 		} else if(button == scrollToMW){
-			$(scrollTo[3]).scrollTop();
+			//$(scrollTo[3]).scrollTop();
+			return scrollTo[3];
 		}	
+		
+			
+		
+/*		$("#button").click(function() {
+				$([document.documentElement, document.body]).animate({
+				scrollTop: $("#elementtoScrollToID").offset().top
+			}, 2000);
+});*/
+		
 	}
 	
 $(".scrollToBDW, .scrollToVIP, .scrollToSHRM, .scrollToMW").click(function(){
 	
 	//var button = $(this);
 	
-	scrollToFocus($(this));
-	
+	var scrollHere = scrollToFocus($(this));
+	$([document.documentElement, document.body]).animate({
+				scrollTop: $(scrollHere).offset().top
+			}, 2000);
 	
 	
 });	
