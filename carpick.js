@@ -479,7 +479,7 @@ $(scrollToBDW,scrollToVIP,scrollToSHRM,scrollToMW).click(function({
 	
 	//var button = $(this);
 	
-	scrollToFocus($(this));
+	scrollToFocus(".scrollToBDW, .scrollToVIP, .scrollToSHRM, .scrollToMW");
 	
 	
 	
