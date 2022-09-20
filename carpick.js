@@ -456,7 +456,7 @@ var scrollToBDW = $(".scrollToBDW");
 var scrollToVIP = $(".scrollToVIP");
 var scrollToSHRM = $(".scrollToSHRM");
 var scrollToMW = $(".scrollToMW");
-var scrollTo = ["#BasicDetailAndWashPackage","#VIPPackage","#ShowroomPackage","#MachineWaxService"];
+var scrollTo = [$("#BasicDetailAndWashPackage"),$("#VIPPackage"),$("#ShowroomPackage"),$("#MachineWaxService")];
 	
 
 	function scrollToFocus(button){
@@ -469,10 +469,7 @@ var scrollTo = ["#BasicDetailAndWashPackage","#VIPPackage","#ShowroomPackage","#
 			$(scrollTo[2]).scrollTop();
 		} else if(button == scrollToMW){
 			$(scrollTo[3]).scrollTop();
-		}
-		
-		
-		
+		}	
 	}
 	
 $(".scrollToBDW, .scrollToVIP, .scrollToSHRM, .scrollToMW").click(function(){
