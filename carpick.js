@@ -326,9 +326,7 @@ function checkZip(zipFound, zipArray){
 		
 		
 	}
-changePricing(curCar);	
-changeDistFee();
-//changeDistFee($().,distBotTitle);
+
 	
 $("#carSelect").change(function(){
 	
@@ -448,5 +446,10 @@ $('#zipInput').keypress(function (e) {
 	
 	
 });
+
+changePricing(curCar);	
+changeDistFee();
+//changeDistFee($().,distBotTitle);	
+	
 	
 });// JavaScript Document
