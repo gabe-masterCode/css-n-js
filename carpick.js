@@ -361,6 +361,10 @@ var curCookie;
 		$("#zipInput").val(""+cZip+"");
 		$("#carSelect").val(""+cCar+"");
 		$("#distFee").empty().append("$"+cFee+".00");
+		curCar = $("#carSelect").val();
+		document.cookie = "car="+curCar;
+		changePricing(curCar);
+		changeDistFee();
 		
 	} else{
 /*		alert(curCookie);
@@ -375,12 +379,9 @@ var curCookie;
 		curZip = cZip;
 		$("#zipInput").val(""+cZip+"");
 		$("#carSelect").val(""+cCar+"");
-		$("#distFee").empty().append("$"+cFee+".00");
-		$(".carPrice1").empty().append("$"+ price[0] +".00");
-		$(".carPrice2").empty().append("$"+ price[1] +".00");
-		$(".carPrice3").empty().append("$"+ price[2] +".00");
-		$(".carType").empty().append(botTitle);
-		$(".distFee1").empty().append("$"+ curDistPrice +".00").removeClass("distFeeSpecial");
+		$("#distFee,.distFee1").empty().append("$"+cFee+".00");
+		changePricing(cCar);
+		changeDistFee();
 		//alert(false);
 	}	
 
