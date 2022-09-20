@@ -10,7 +10,15 @@
 
 $(document).ready(function(){
 //var decodedCookie = decodeURIComponent(document.cookie);
-
+	var cCar;
+	var cZip;
+	var cFee;
+	var curZip = $("#zipInput").val();
+	var curCar = $("#carSelect").val();
+	var curCappedDistInfo = [];
+	var curDist;
+	var curDistPrice;
+	var curDistBotTitle;
 
 
 //var chosenCar = $(this).find("img").hasClass("selected-car-type");
@@ -329,15 +337,7 @@ $("#carSelect").change(function(){
 		  changePricing(curCar);
 });
 	
-	var cCar;
-	var cZip;
-	var cFee;
-	var curZip = $("#zipInput").val();
-	var curCar = $("#carSelect").val();
-	var curCappedDistInfo = [];
-	var curDist;
-	var curDistPrice;
-	var curDistBotTitle;
+
 function getCookie(name) {
   const value = `; ${document.cookie}`;
   const parts = value.split(`; ${name}=`);
