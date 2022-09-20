@@ -10,58 +10,10 @@
 
 $(document).ready(function(){
 //var decodedCookie = decodeURIComponent(document.cookie);
-	var cCar;
-	var cZip;
-	var cFee;
-	var curZip = $("#zipInput").val();
-	var curCar = $("#carSelect").val();
-	var curCappedDistInfo = [];
-	var curDist;
-	var curDistPrice;
-	var curDistBotTitle;
-function getCookie(name) {
-  const value = `; ${document.cookie}`;
-  const parts = value.split(`; ${name}=`);
-  if (parts.length === 2) return parts.pop().split(';').shift();
-}
-var curCookie;
-	//alert(document.cookie);
-	if((document.cookie)&&(getCookie("car")!="")&&(getCookie("zip")!="")&&(getCookie("fee")!="")){
-		/*curCookie =  document.cookie;
-		var curCookies = curCookie.split(";");
-		alert(curCookies);
-		var cCar = curCookies[0];
-		var cZip = curCookies[1];
-		cCar = cCar.split("=")[1];
-		cZip = cZip.split("=")[1];
-		$("#zipInput").val(""+cZip+"");
-		$("#carSelect").val(""+cCar+"");*/
-		cCar = getCookie("car");
-		cZip = getCookie("zip");
-		cFee = getCookie("fee");
-		$("#zipInput").val(""+cZip+"");
-		$("#carSelect").val(""+cCar+"");
-		$("#distFee").empty().append("$"+cFee+".00");
-		
-	} else{
-/*		alert(curCookie);
-		var cCar = false;
-		var cZip = false;*/
-		document.cookie = "car=sedan;";
-		document.cookie = "zip=32804;";
-		cCar = "sedan";
-		cZip = "32804";
-		cFee = "10";
-		curCar = cCar;
-		curZip = cZip;
-		$("#zipInput").val(""+cZip+"");
-		$("#carSelect").val(""+cCar+"");
-		$("#distFee").empty().append("$"+cFee+".00");
-		//alert(false);
-	}
 
 
-  //var chosenCar = $(this).find("img").hasClass("selected-car-type");
+
+//var chosenCar = $(this).find("img").hasClass("selected-car-type");
 var pickedSedan = $('#detail-wash-sedan img').hasClass("selected-car-type");
 var pickedCoupe = $('#detail-wash-coupe img').hasClass("selected-car-type");
 var vSedan = $('#detail-wash-sedan');
@@ -377,7 +329,60 @@ $("#carSelect").change(function(){
 		  changePricing(curCar);
 });
 	
-	
+	var cCar;
+	var cZip;
+	var cFee;
+	var curZip = $("#zipInput").val();
+	var curCar = $("#carSelect").val();
+	var curCappedDistInfo = [];
+	var curDist;
+	var curDistPrice;
+	var curDistBotTitle;
+function getCookie(name) {
+  const value = `; ${document.cookie}`;
+  const parts = value.split(`; ${name}=`);
+  if (parts.length === 2) return parts.pop().split(';').shift();
+}
+var curCookie;
+	//alert(document.cookie);
+	if((document.cookie)&&(getCookie("car")!="")&&(getCookie("zip")!="")&&(getCookie("fee")!="")){
+		/*curCookie =  document.cookie;
+		var curCookies = curCookie.split(";");
+		alert(curCookies);
+		var cCar = curCookies[0];
+		var cZip = curCookies[1];
+		cCar = cCar.split("=")[1];
+		cZip = cZip.split("=")[1];
+		$("#zipInput").val(""+cZip+"");
+		$("#carSelect").val(""+cCar+"");*/
+		cCar = getCookie("car");
+		cZip = getCookie("zip");
+		cFee = getCookie("fee");
+		$("#zipInput").val(""+cZip+"");
+		$("#carSelect").val(""+cCar+"");
+		$("#distFee").empty().append("$"+cFee+".00");
+		
+	} else{
+/*		alert(curCookie);
+		var cCar = false;
+		var cZip = false;*/
+		document.cookie = "car=sedan;";
+		document.cookie = "zip=32804;";
+		cCar = "sedan";
+		cZip = "32804";
+		cFee = "10";
+		curCar = cCar;
+		curZip = cZip;
+		$("#zipInput").val(""+cZip+"");
+		$("#carSelect").val(""+cCar+"");
+		$("#distFee").empty().append("$"+cFee+".00");
+		$(".carPrice1").empty().append("$"+ price[0] +".00");
+		$(".carPrice2").empty().append("$"+ price[1] +".00");
+		$(".carPrice3").empty().append("$"+ price[2] +".00");
+		$(".carType").empty().append(botTitle);
+		$(".distFee1").empty().append("$"+ curDistPrice +".00").removeClass("distFeeSpecial");
+		//alert(false);
+	}	
 
 $("#zipInput").focusout(function(){
 		
