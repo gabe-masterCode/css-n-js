@@ -452,8 +452,10 @@ changeDistFee();
 //changeDistFee($().,distBotTitle);	
 
 //$(".scrollToBDW")
-$(".scrollToVIP").scroll('#VIPPackage');
-$(".scrollToSHRM").scroll('#ShowroomPackage');
+//$(".scrollToVIP").scroll('#VIPPackage');
+$(".scrollToVIP").get(0).scrollIntoView();
+$(".scrollToSHRM").get(0).scrollIntoView();
+//$(".scrollToSHRM").scroll('#ShowroomPackage');
 //$(".scrollToMW")	
 	
 	
