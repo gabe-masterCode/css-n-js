@@ -290,6 +290,7 @@ function checkZip(zipFound, zipArray){
 		$(".bgBox-alt-bg1-end h2, .carPrice1").empty().append("$"+ price[0] +".00");
 		$(".bgBox-alt-bg2-end h2, .carPrice2").empty().append("$"+ price[1] +".00");
 		$(".bgBox-alt-bg3-end h2, .carPrice3").empty().append("$"+ price[2] +".00");
+		$(".bgBox-alt-bg3-end h2, .carPrice4").empty().append("$"+ price[3] +".00");
 		$(".bgBox-alt-bg1-end small,.bgBox-alt-bg2-end small,.bgBox-alt-bg3-end small, .carType").empty().append(botTitle);
 	}
 	
