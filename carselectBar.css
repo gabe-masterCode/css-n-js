@@ -29,7 +29,7 @@ html, body{
 
 #carSelectBar{
 	max-height:"80px";
-	min-width: 100vw;
+	min-width: 100%;
 	//background-color:brown;
 	background-color: rgba(.2,.2,.2,.4);
 	padding: 0px;
