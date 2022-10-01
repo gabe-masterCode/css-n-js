@@ -38,10 +38,10 @@ const carSelection = ["sedan","coupe","suv","caravan","truck","truckL"];
 //basic-vip-showroom-machine
 const pSedan = ["60","100","600","180"];
 const pCoupe = [pSedan[0],pSedan[1],"400",pSedan[3]];
-const pSUV = ["100","140","800","220"];
-const pCaravan = ["120","160",pSUV[2],pSUV[3]];
-const pTruck = ["100","140","1000","250"];
-const pTruckL = ["140","180",pTruck[2],"300"];
+const pSUV = ["100","140","800","250"];
+const pCaravan = ["120","200","1000","400"];
+const pTruck = ["100","140","800","280"];
+const pTruckL = ["140","180","1000",pTruck[3]];
 
 var curItem;
 var selectedCarType;
