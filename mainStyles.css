@@ -373,6 +373,10 @@ color: #00000; padding: 24px 0px!important; border: 0px; -webkit-box-shadow: 0 -
   //color:black !important; 
   font-size:20px!important;
   font-weight:bold!important;}
+.moddedButtonEnd4{background-color:slategray !important; 
+  //color:black !important; 
+  font-size:20px!important;
+  font-weight:bold!important;}
 
 //--------------------modded headers, paragraphs
 
@@ -569,3 +573,17 @@ border-color:white !important;
     border-style:double;
     border-width: 2px;
 }
+
+.bookingButtonMod{
+  border-radius: 10px!important;
+  padding-top:70px!important;
+  padding-bottom: 70px!important;
+  }
+  @media only screen and (max-width:640px){
+.bookingButtonMod{
+  border-radius: 0px 0px 10px 10px!important;
+  padding-top:70px!important;
+  padding-bottom: 70px!important;
+  width:100%;
+  }
+  }
