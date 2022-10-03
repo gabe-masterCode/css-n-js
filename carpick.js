@@ -345,7 +345,7 @@ function getCookie(name) {
 var curCookie;
 	//alert(document.cookie);
 	//if((document.cookie)&&(getCookie("car")!="")&&(getCookie("zip")!="")&&(getCookie("fee")!="")){
-	if((document.cookie)&&(getCookie("car"))&&(getCookie("zip"))&&((getCookie("fee")){
+	if((document.cookie)&&(getCookie("car"))&&(getCookie("zip"))&&(getCookie("fee")){
 		/*curCookie =  document.cookie;
 		var curCookies = curCookie.split(";");
 		
