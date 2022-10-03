@@ -19,6 +19,7 @@ $(document).ready(function(){
 	var curDist;
 	var curDistPrice;
 	var curDistBotTitle;
+	var distType;
 
 
 //var chosenCar = $(this).find("img").hasClass("selected-car-type");
@@ -58,6 +59,7 @@ function distPrice(zipDist, distFee, distBotTitle, outofbounds){
 	if(outofbounds == true){
 		returnInfo[0] = distFee[4];
 		returnInfo[1] = distBotTitle[4];
+		distType = 4; //0-4 - meaning in the order to unreachable, 5 types. reusable for update url fuction
 		return returnInfo;
 		
 	} else{
@@ -66,23 +68,28 @@ function distPrice(zipDist, distFee, distBotTitle, outofbounds){
 	   // is less than 9.5 miles but greater than 0 miles
 		returnInfo[0] = distFee[0];
 		returnInfo[1] = distBotTitle[0];
+		distType = 0;
 		
 	   } else if((zipDist < 14.5)&&(zipDist >= 9.5)){
 		  // is less than 14.5 miles but greater than 9.5 miles 
 	   		returnInfo[0] = distFee[1];
 			returnInfo[1] = distBotTitle[1];
+		    distType = 1;
 	   } else if((zipDist < 24.5)&&(zipDist >= 14.5)){
 		   // is less than 24.5 miles but greater than 14.5 miles 
 	   		returnInfo[0] = distFee[2];
 			returnInfo[1] = distBotTitle[2];
+		   	distType = 2;
 	   } else if((zipDist <= 60)&&(zipDist >= 24.5)){
 		   // is less than or equal to 60 miles but greater than 24.5 miles 
 	   		returnInfo[0] = distFee[3];
 			returnInfo[1] = distBotTitle[3];
+		    distType = 3;
 	   } else {
 		   // is out of bounds anyways
 		   	returnInfo[0] = distFee[4];
 			returnInfo[1] = distBotTitle[4];
+		    distType = 4;
 			return returnInfo;
 		   
 	   }
@@ -328,13 +335,71 @@ function checkZip(zipFound, zipArray){
 		
 	}
 
+function updateLinks (bVal, carType, distType){//bVall is boolean value so true or false
 	
-$("#carSelect").change(function(){
+	var buyText = "<b>Register & Buy</b>";
+	var alertText = "<b>Update your info.</b>";
+	if( bVal == true){
+		if(carType == "caravan"){
+	    	$('.bookingNum1').attr('href',baseURL+bwCaravan[distType]);
+	    	$('.bookingNum2').attr('href',baseURL+vpCaravan[distType]);
+	    	$('.bookingNum3').attr('href',baseURL+srCaravan[distType]);
+	    	$('.bookingNum4').attr('href',baseURL+mwCaravan[distType]);
+			$('.bookingNum1 ,.bookingNum2 ,.bookingNum3 ,.bookingNum4').empty().append(buyText);
+			} else if(carType == "coupe"){
+				$('.bookingNum1').attr('href',baseURL+bwCoupe[distType]);
+				$('.bookingNum2').attr('href',baseURL+vpCoupe[distType]);
+				$('.bookingNum3').attr('href',baseURL+srCoupe[distType]);
+				$('.bookingNum4').attr('href',baseURL+mwCoupe[distType]);
+				$('.bookingNum1 ,.bookingNum2 ,.bookingNum3 ,.bookingNum4').empty().append(buyText);
+				} else if(carType == "sedan"){
+					$('.bookingNum1').attr('href',baseURL+bwSedan[distType]);
+					$('.bookingNum2').attr('href',baseURL+vpSedan[distType]);
+					$('.bookingNum3').attr('href',baseURL+srSedan[distType]);
+					$('.bookingNum4').attr('href',baseURL+mwSedan[distType]);
+					$('.bookingNum1 ,.bookingNum2 ,.bookingNum3 ,.bookingNum4').empty().append(buyText);
+					} else if(carType == "suv"){
+				 		$('.bookingNum1').attr('href',baseURL+bwSUV[distType]);
+						$('.bookingNum2').attr('href',baseURL+vpSUV[distType]);
+						$('.bookingNum3').attr('href',baseURL+srSUV[distType]);
+						$('.bookingNum4').attr('href',baseURL+mwSUV[distType]);
+						$('.bookingNum1 ,.bookingNum2 ,.bookingNum3 ,.bookingNum4').empty().append(buyText);
+				 		} else if(carType == "truck"){
+				 			$('.bookingNum1').attr('href',baseURL+bwTruck[distType]);
+							$('.bookingNum2').attr('href',baseURL+vpTruck[distType]);
+							$('.bookingNum3').attr('href',baseURL+srTruck[distType]);
+							$('.bookingNum4').attr('href',baseURL+mwTruck[distType]);
+							$('.bookingNum1 ,.bookingNum2 ,.bookingNum3 ,.bookingNum4').empty().append(buyText);
+				 			} else if(carType == "truckL"){
+		 						$('.bookingNum1').attr('href',baseURL+bwTruckL[distType]);
+								$('.bookingNum2').attr('href',baseURL+vpTruckL[distType]);
+								$('.bookingNum3').attr('href',baseURL+srTruckL[distType]);
+								$('.bookingNum4').attr('href',baseURL+mwTruckL[distType]);
+								$('.bookingNum1 ,.bookingNum2 ,.bookingNum3 ,.bookingNum4').empty().append(buyText);
+				 }else{
+					 
+					 			$('.bookingNum1').attr('href','#');
+								$('.bookingNum2').attr('href','#');
+								$('.bookingNum3').attr('href','#');
+								$('.bookingNum4').attr('href','#');
+					 			$('.bookingNum1 ,.bookingNum2 ,.bookingNum3 ,.bookingNum4').removeAttr('href').empty().append(alertText);
+					 			$("#carSelectBar").toggle(highlight);
+					 
+				 }
+	   }else{
+	   
+		   
+		   						$('.bookingNum1').attr('href','#');
+								$('.bookingNum2').attr('href','#');
+								$('.bookingNum3').attr('href','#');
+								$('.bookingNum4').attr('href','#');
+					 			$('.bookingNum1 ,.bookingNum2 ,.bookingNum3 ,.bookingNum4').removeAttr('href').empty().append(alertText);
+		   						$("#carSelectBar").toggle(highlight);
+		   						//$(  'selector' ).prop( "class", "disable" );
+	   }
 	
-		   curCar = $("#carSelect").val();
-		  document.cookie = "car="+curCar;
-		  changePricing(curCar);
-});
+}	
+
 	
 
 function getCookie(name) {
@@ -361,7 +426,7 @@ var curCookie;
 		cCar = getCookie("car");
 		cZip = getCookie("zip");
 		cFee = getCookie("fee");
-		alert(cCar+" "+cZip+" "+cFee);
+		//alert(cCar+" "+cZip+" "+cFee);
 		$("#zipInput").val(cZip);
 		$("#carSelect").val(cCar);
 		$("#distFee").empty().append("$"+cFee+".00");
@@ -371,6 +436,7 @@ var curCookie;
 		document.cookie = "fee="+cFee;
 		changePricing(cCar);
 		changeDistFee();
+		updateLinks (true, cCar, distType);
 		
 	} else{
 /*		alert(curCookie);
@@ -389,13 +455,23 @@ var curCookie;
 		$("#distFee,.distFee1").empty().append("$"+cFee+".00");
 		changePricing(cCar);
 		changeDistFee();
+		updateLinks (true, cCar, distType);
 		//alert(false);
 	}	
-
+	
+$("#carSelect").change(function(){
+	
+		   curCar = $("#carSelect").val();
+		  document.cookie = "car="+curCar;
+		  changePricing(curCar);
+		  updateLinks (true, curCar, distType);
+});
+	
 $("#zipInput").focusout(function(){
 		
 	  curZip = $("#zipInput").val();
 	  changeDistFee();
+	  updateLinks (true, curCar, distType);
 		if(zips[""+ curZip +""]){
 		 
 /*		  curZip = zips[""+ curZip +""]["zip"];
@@ -409,11 +485,13 @@ $("#zipInput").focusout(function(){
 		  $("#zipInput").removeClass("zipCodeError");*/
 			document.cookie = "zip="+curZip;
 			document.cookie = "fee="+curDistPrice;
-			changeDistFee(curDistPrice,curDistBotTitle);
+			//changeDistFee(curDistPrice,curDistBotTitle);
+			changeDistFee();
+			
 			//alert(document.cookie);
 		  
 	  } else {
-		  
+		  updateLinks (false, curCar, distType);
 		  //curDistPrice = distFee[4];
 		  //alert("Zip not found or out of bounds: "+ curZip +", "+ curDistPrice);
 		  //$("#distFee").empty().append(""+ curDistPrice +"").addClass("distFeeSpecial");
@@ -426,6 +504,7 @@ $('#zipInput').keypress(function (e) {
 	  
    	  curZip = $("#zipInput").val();
 	  changeDistFee();
+	  updateLinks (true, curCar, distType);
 		if(zips[""+ curZip +""]){
 		  
 		 /* curZip = zips[""+ curZip +""]["zip"];
@@ -448,6 +527,7 @@ $('#zipInput').keypress(function (e) {
 		  //alert("Zip not found or out of bounds: "+ curZip +", "+ curDistPrice);
 		  $("#distFee").empty().append(""+ curDistPrice +"").addClass("distFeeSpecial");
 		  $("#zipInput").addClass("zipCodeError");*/
+		  updateLinks (false, curCar, distType);
 		  return false;
 	  }
 	  
@@ -458,6 +538,7 @@ $('#zipInput').keypress(function (e) {
 
 changePricing(curCar);	
 changeDistFee();
+updateLinks (true, curCar, distType);
 //changeDistFee($().,distBotTitle);	
 
 
