@@ -347,12 +347,12 @@ padding: 24px 0px!important; border: 0px; -webkit-box-shadow: 0 -2px 0 rgba(0,0,
 }
 
 
-.moddedButtonEnd1:hover,.moddedButtonEnd2:hover,.moddedButtonEnd3:hover{
+.moddedButtonEnd1:hover,.moddedButtonEnd2:hover,.moddedButtonEnd3:hover,.moddedButtonEnd4:hover{
   //background:#52eee2 !important;
  text-decoration: underline!important;
   font-weight:bolder;
 }
-.moddedButtonEnd1,.moddedButtonEnd2,.moddedButtonEnd3{
+.moddedButtonEnd1,.moddedButtonEnd2,.moddedButtonEnd3,.moddedButtonEnd4{
 color: #00000; padding: 24px 0px!important; border: 0px; -webkit-box-shadow: 0 -2px 0 rgba(0,0,0,0.15) inset;-moz-box-shadow: 0 -2px 0 rgba(0,0,0,0.15) inset;box-shadow: 0 -2px 0 rgba(0,0,0,0.15) inset;border-radius: 0px 0px 20px 20px !important; text-decoration: none; display: inline-block; width:100%;text-align:center;
  backdrop-filter: blur(5px)!important;
   font-size: calc(20px + .05vw)!important;
