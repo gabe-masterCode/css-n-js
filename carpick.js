@@ -32,20 +32,20 @@ var vTruck = $('#detail-wash-truck-2-doors');
 var vTruckLarge = $('#detail-wash-truck-large-3-doors-4-doors');
 
 
-const distFee = ["10","15","25","50","<b>Contact us.</b>"];
-const carTypes = [vSedan,vCoupe,vSUV,vCaravan,vTruck,vTruckLarge];
-const carSelection = ["sedan","coupe","suv","caravan","truck","truckL"];
+var distFee = ["10","15","25","50","<b>Contact us.</b>"];
+var carTypes = [vSedan,vCoupe,vSUV,vCaravan,vTruck,vTruckLarge];
+var carSelection = ["sedan","coupe","suv","caravan","truck","truckL"];
 //basic-vip-showroom-machine
-const pSedan = ["60","100","600","180"];
-const pCoupe = [pSedan[0],pSedan[1],"400",pSedan[3]];
-const pSUV = ["100","140","800","250"];
-const pCaravan = ["120","200","1000","400"];
-const pTruck = ["100","140","800","280"];
-const pTruckL = ["140","180","1000",pTruck[3]];
+var pSedan = ["60","100","600","180"];
+var pCoupe = [pSedan[0],pSedan[1],"400",pSedan[3]];
+var pSUV = ["100","140","800","250"];
+var pCaravan = ["120","200","1000","400"];
+var pTruck = ["100","140","800","280"];
+var pTruckL = ["140","180","1000",pTruck[3]];
 
 var curItem;
 var selectedCarType;
-const selectedCarTypeLabel = ["Sedan","Coupe","SUV","Caravan","Truck 2 Door","Truck 3/4 Door"];
+var selectedCarTypeLabel = ["Sedan","Coupe","SUV","Caravan","Truck 2 Door","Truck 3/4 Door"];
 var outofbounds = false;
 var packPageBotCarTitle = ["For Sedans Starting from:","For Coupes Starting from:","For SUVs Starting from:","For Caravans Starting from:","For Trucks (2-Door) Starting from:","For Trucks (3/4-Door) Starting from:","Starting from:"];
 var packPageBotDistTitle = ["Service Distance Charge: $"+ distFee[0] +".00","Service Distance Charge: $"+ distFee[1] +".00","Service Distance Charge: $"+ distFee[2] +".00","Service Distance Charge: $"+ distFee[3] +".00","Service Distance Charge: "+ distFee[4]];
@@ -369,19 +369,19 @@ var curCookie;
 /*		alert(curCookie);
 		var cCar = false;
 		var cZip = false;*/
-		document.cookie = "car=sedan;";
-		document.cookie = "zip=32804;";
+		//document.cookie = "car=sedan;";
+		//document.cookie = "zip=32804;";
 		cCar = "sedan";
 		cZip = "32804";
 		cFee = "10";
 		curCar = cCar;
 		curZip = cZip;
-		$("#zipInput").val(""+cZip+"");
-		$("#carSelect").val(""+cCar+"");
+		$("#zipInput").val(cZip);
+		$("#carSelect").val(cCar);
 		$("#distFee,.distFee1").empty().append("$"+cFee+".00");
 		changePricing(cCar);
 		changeDistFee();
-		//alert(false);
+		alert(false);
 	}	
 
 $("#zipInput").focusout(function(){
