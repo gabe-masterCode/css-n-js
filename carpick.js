@@ -344,7 +344,8 @@ function getCookie(name) {
 }
 var curCookie;
 	//alert(document.cookie);
-	if((document.cookie)&&(getCookie("car")!="")&&(getCookie("zip")!="")&&(getCookie("fee")!="")){
+	//if((document.cookie)&&(getCookie("car")!="")&&(getCookie("zip")!="")&&(getCookie("fee")!="")){
+	if((document.cookie)&&(getCookie("car")!="0")&&(getCookie("zip")!="0"))){
 		/*curCookie =  document.cookie;
 		var curCookies = curCookie.split(";");
 		alert(curCookies);
@@ -369,8 +370,8 @@ var curCookie;
 /*		alert(curCookie);
 		var cCar = false;
 		var cZip = false;*/
-		//document.cookie = "car=sedan;";
-		//document.cookie = "zip=32804;";
+		document.cookie = "car=sedan;";
+		document.cookie = "zip=32804;";
 		cCar = "sedan";
 		cZip = "32804";
 		cFee = "10";
@@ -381,7 +382,7 @@ var curCookie;
 		$("#distFee,.distFee1").empty().append("$"+cFee+".00");
 		changePricing(cCar);
 		changeDistFee();
-		alert(false);
+		//alert(false);
 	}	
 
 $("#zipInput").focusout(function(){
