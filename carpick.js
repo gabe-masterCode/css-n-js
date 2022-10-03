@@ -345,7 +345,7 @@ function getCookie(name) {
 var curCookie;
 	//alert(document.cookie);
 	//if((document.cookie)&&(getCookie("car")!="")&&(getCookie("zip")!="")&&(getCookie("fee")!="")){
-	if((document.cookie)&&(getCookie("car")!="0")&&(getCookie("zip")!="0")){
+	if((document.cookie)&&(getCookie("car"))&&(getCookie("zip"))&&((getCookie("fee")){
 		/*curCookie =  document.cookie;
 		var curCookies = curCookie.split(";");
 		
@@ -361,12 +361,14 @@ var curCookie;
 		cCar = getCookie("car");
 		cZip = getCookie("zip");
 		cFee = getCookie("fee");
-		alert(cCar+" "+cZip+" "+cFee+" ");
-		$("#zipInput").val(""+cZip+"");
-		$("#carSelect").val(""+cCar+"");
+		alert(cCar+" "+cZip+" "+cFee);
+		$("#zipInput").val(cZip);
+		$("#carSelect").val(cCar);
 		$("#distFee").empty().append("$"+cFee+".00");
 		curCar = $("#carSelect").val();
-		document.cookie = "car="+curCar;
+		document.cookie = "car="+cCar;
+		document.cookie = "zip="+cZip;
+		document.cookie = "fee="+cFee;
 		changePricing(cCar);
 		changeDistFee();
 		
@@ -376,6 +378,7 @@ var curCookie;
 		var cZip = false;*/
 		document.cookie = "car=sedan";
 		document.cookie = "zip=32804";
+		document.cookie = "fee=10";
 		cCar = "sedan";
 		cZip = "32804";
 		cFee = "10";
