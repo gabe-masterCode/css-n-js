@@ -94,7 +94,7 @@ function distPrice(zipDist, distFee, distBotTitle, outofbounds){
 }
 	
 function curCarSelected(car){
-	var price;
+	var price[];
 	if(car == "sedan"){
 price = pSedan;
 } else if(car == "coupe"){
