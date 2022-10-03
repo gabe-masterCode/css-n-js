@@ -1,3 +1,16 @@
+/*
+bw = basic wash
+mw = machine wax
+sr = show room
+vp = vip
+
+column 1, 2, 3, 4
+       10miles, 15miles, 25miles, 50miles
+
+*/
+
+var baseURL = "https://app.squarespacescheduling.com/schedule.php?owner=27271055&appointmentType=";
+
 var bwCaravan = ["37514948","37514978","37514982","37514987"];
 var mwCaravan = ["37515083","37515090","37515099","37515105"];
 var srCaravan = ["37515039","37515049","37515057","37515061"];
