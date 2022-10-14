@@ -134,7 +134,7 @@ html, body{
 #carSelectBar{
 	//max-height:180px;
 	min-width: 100%;
-	background-color:brown;
+	//background-color:brown;
 	background-color: rgba(.2,.2,.2,.4);
 	padding: 0px;
 	margin: 0px;
@@ -173,7 +173,7 @@ html, body{
 }
 #carType{
 	display: inline;
-	background-color:green;
+	//background-color:green;
 	width: 50px;
 	height:30px;
 }
@@ -181,7 +181,7 @@ html, body{
 
 #zipCode{
 	display: block;
-	background-color:blue;
+	//background-color:blue;
 	width: 200px;
 	height:30px;
 }
@@ -203,7 +203,7 @@ html, body{
 }
 #distFee{
 	display: inline;
-	background-color:gray;
+	//background-color:gray;
 	height:30px;
 	margin-right: 5vw;
 	color: #959595;
