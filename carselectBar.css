@@ -189,6 +189,7 @@ html, body{
 	color:#b9b498;
 	width:80px;
 	display: inline;
+	margin-left:40px;
 }
 .zipCodeError{
 	text-decoration:red wavy underline;
@@ -205,8 +206,9 @@ html, body{
 	display: inline;
 	//background-color:gray;
 	height:30px;
-	margin-right: 5vw;
+	//margin-right: 5vw;
 	color: #959595;
+	margin-left:40px;
 }
 .distFeeSpecial{
 	font-weight: bold;
