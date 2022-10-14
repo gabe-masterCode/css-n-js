@@ -3,10 +3,11 @@
 html, body{
 	padding: 0px;
 	margin: 0px;
-	background-image: url("../Screenshot_2bg.png");
+	//background-image: url("../Screenshot_2bg.png");
   	background-repeat: no-repeat;
 	background-position: center top;
 	background-size: cover;
+	background-color: #000;
 	height: 100%;
 }
 #outPut{
@@ -128,3 +129,104 @@ html, body{
 
 
 
+@media only screen and (max-width:640px){
+	
+#carSelectBar{
+	max-height:180px;
+	min-width: 100%;
+	background-color:brown;
+	background-color: rgba(.2,.2,.2,.4);
+	padding: 0px;
+	margin: 0px;
+	position: absolute;
+	z-index: 0;
+	display: flex;
+	justify-content: flex-end;
+    align-items: flex-end;
+	min-height:80px;
+	left:0;
+	right: 0;
+	padding-top: 0px;
+	padding-bottom: 4px;
+	top:70px;
+	color:white;
+}
+
+
+#customerStats{
+	display:block;
+	//background-color:purple;
+	max-height:80px;
+	height:50px;
+	min-width: 400px;
+	margin-right:0px;
+}
+
+#customerInfoEdit{
+	display: inline;
+	//background-color:blue;
+	width: 50px;
+	height:30px;
+	font-size: calc(10px + .2vw);
+	color:antiquewhite;
+	
+}
+#carType{
+	display: inline;
+	//background-color:green;
+	width: 50px;
+	height:30px;
+}
+
+
+#zipCode{
+	display: inline;
+	//background-color:blue;
+	width: 50px;
+	height:30px;
+}
+.zipCodeError{
+	text-decoration:red wavy underline;
+	
+}
+
+#distCharge{
+	display: block;
+	width:200px;
+	height:30px;
+	
+}
+#distFee{
+	display: inline;
+	//background-color:gray;
+	height:30px;
+	margin-right: 5vw;
+	color: #959595;
+}
+.distFeeSpecial{
+	font-weight: bold;
+	color:#B718B6!important;
+	
+}
+#carSelect{
+	color: #52eee2;
+}
+#zipInput{
+	color:#b9b498;
+	width:100px;
+}
+#carSelect, #zipInput{
+	background-color:transparent;
+	border: 0px solid ;
+	min-height:100%;
+	padding: 0px;
+	margin: 0px;
+	//height:30px;
+	font-weight: bold;
+	
+}
+#carSelect:focus, #zipInput:focus{
+	background-color:white;
+	color:#000;
+}
+}
