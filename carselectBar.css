@@ -143,7 +143,7 @@ html, body{
 	display: block;
 	justify-content: flex-end;
     align-items: flex-end;
-	min-height:80px;
+	min-height:100px;
 	left:0;
 	right: 0;
 	padding-top: 0px;
@@ -159,7 +159,7 @@ html, body{
 	max-height:80px;
 	height:50px;
 	min-width: 380px;
-	margin-left:20px;
+	margin-left:130px;
 }
 
 #customerInfoEdit{
@@ -173,17 +173,22 @@ html, body{
 }
 #carType{
 	display: inline;
-	//background-color:green;
+	background-color:green;
 	width: 50px;
 	height:30px;
 }
 
 
 #zipCode{
-	display: inline;
-	//background-color:blue;
-	width: 50px;
+	display: block;
+	background-color:blue;
+	width: 200px;
 	height:30px;
+}
+#zipInput{
+	color:#b9b498;
+	width:80px;
+	display: inline;
 }
 .zipCodeError{
 	text-decoration:red wavy underline;
@@ -191,14 +196,14 @@ html, body{
 }
 
 #distCharge{
-	display: block;
+	display: inline;
 	width:200px;
 	height:30px;
 	
 }
 #distFee{
 	display: inline;
-	//background-color:gray;
+	background-color:gray;
 	height:30px;
 	margin-right: 5vw;
 	color: #959595;
@@ -210,11 +215,9 @@ html, body{
 }
 #carSelect{
 	color: #52eee2;
+	display:inline;
 }
-#zipInput{
-	color:#b9b498;
-	width:100px;
-}
+
 #carSelect, #zipInput{
 	background-color:transparent;
 	border: 0px solid ;
