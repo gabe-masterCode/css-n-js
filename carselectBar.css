@@ -132,7 +132,7 @@ html, body{
 @media only screen and (max-width:640px){
 	
 #carSelectBar{
-	max-height:180px;
+	//max-height:180px;
 	min-width: 100%;
 	background-color:brown;
 	background-color: rgba(.2,.2,.2,.4);
@@ -140,7 +140,7 @@ html, body{
 	margin: 0px;
 	position: absolute;
 	z-index: 0;
-	display: flex;
+	display: block;
 	justify-content: flex-end;
     align-items: flex-end;
 	min-height:80px;
@@ -158,8 +158,8 @@ html, body{
 	//background-color:purple;
 	max-height:80px;
 	height:50px;
-	min-width: 400px;
-	margin-right:0px;
+	min-width: 380px;
+	margin-left:20px;
 }
 
 #customerInfoEdit{
