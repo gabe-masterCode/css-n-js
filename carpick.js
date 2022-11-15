@@ -36,13 +36,13 @@ var vTruckLarge = $('#detail-wash-truck-large-3-doors-4-doors');
 var distFee = ["10","15","25","50","<b>Contact us.</b>"];
 var carTypes = [vSedan,vCoupe,vSUV,vCaravan,vTruck,vTruckLarge];
 var carSelection = ["sedan","coupe","suv","caravan","truck","truckL"];
-//basic-vip-showroom-machine
-var pSedan = ["60","100","600","180"];
-var pCoupe = [pSedan[0],pSedan[1],"400",pSedan[3]];
-var pSUV = ["100","140","800","250"];
-var pCaravan = ["120","200","1000","400"];
-var pTruck = ["100","140","800","280"];
-var pTruckL = ["140","180","1000",pTruck[3]];
+//-----------basic-vip-showroom-machine
+var pSedan = ["80","180","600","180"];
+var pCoupe = ["80","140","400",pSedan[3]];
+var pSUV = ["140","200","800","250"];
+var pCaravan = ["220","280","1000","400"];
+var pTruck = ["130","200","800","280"];
+var pTruckL = ["200","280","1000",pTruck[3]];
 
 var curItem;
 var selectedCarType;
